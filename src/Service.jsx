@@ -1,7 +1,10 @@
+import './index.css'
 const Service=()=>{
  return(
     <>
-    I am service
+    <div >
+      <button className='checkBtn'>Hello</button>
+    </div>
     </>
  )
 }

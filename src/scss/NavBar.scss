@@ -5,7 +5,7 @@
 }
 
 .navbar-container {
-  @include flex(space-between, center, null);
+  @include flex(space-between, center, null,null);
   @include size(null, 90px, 0px, 100px);
   background-color: #181818;
 }
@@ -16,7 +16,7 @@
 
 .navbar-list {
   list-style: none;
-  @include flex(space-between, center, 50px);
+  @include flex(space-between, center, 50px,null);
   li {
     :hover{
      color: #e3d285;
@@ -25,13 +25,10 @@
     position: relative;
     :before{
       content: "";
-      position: absolute;
-      left:0;
-      top:120%;
-      width:0;
+      @include position(120%,null,0,null);
+      @include d-box(2px,0,null,null);
       background-color:#e3d285;
       transition: all 0.5s linear;
-      height: 2px;
     }
      :hover:before{
       width: 100%;
@@ -39,17 +36,17 @@
   }
 }
 .navlink {
-  @include font(#fff, bold);
+  @include font(450,null,null,#e3d285,null);
   text-decoration: none;
   padding-bottom: 10px;
 }
-
 .active {
   text-decoration: none;
   color:#e3d285;
 }
 .ham-icon{
   display: none;
+  cursor: pointer;
 }
 @media only screen and (max-width:1044px){
   .navbar-list{

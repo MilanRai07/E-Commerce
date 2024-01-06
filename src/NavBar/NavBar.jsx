@@ -5,8 +5,8 @@ import { ReactComponent as HamBurger } from "../assets/Ham.svg";
 import { useState } from 'react';
 import HamBurgerMenu from './HamburgerMenu';
 const NavBar = () => {
-    const [showham, setShowHam] = useState(false);
-    const ToggleHamburger=()=>{
+    const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
+    const ToggleHamburger=()=>{  //toggle hamburger menu nav
         setShowHam(!showham);
     }
     return (
@@ -53,7 +53,7 @@ const NavBar = () => {
                     </ul>
                 </div>
             </div>
-            {showham ?
+            {showham ?        //toggle hammenu by hamburger icon
                 <HamBurgerMenu /> :
                 ""
             }

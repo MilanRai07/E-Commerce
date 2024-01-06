@@ -2,7 +2,7 @@
 .hamburger-container{
     display: none;
     div{
-        @include flex(center,center,null);
+        @include flex(center,center,null,null);
         height: 40px;
         width:100%;
         border-bottom: 2px solid #e3d285;
@@ -10,7 +10,7 @@
         transition: 0.5s ease-in-out;
         .hamburger-navlink{
            text-decoration: none;
-           @include font(#fff, bold);
+           @include font(450,null,null,#e3d285,null);
         }
     }
     div:hover{

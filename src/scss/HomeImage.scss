@@ -1,0 +1,71 @@
+@import 'mixin.scss';
+.home-container{
+    @include d-box(520px, 100%, null, null);
+    position:relative;
+    .left-slide{
+        @include position(50%,null,7%,null);
+        z-index:1;
+    }
+    .right-slide{
+        @include position(50%,null,null,7%);
+        z-index:1;
+    }
+.homeimg-container {
+    z-index:0;
+    position: relative;
+    height: 520px;
+    .home-img {
+        img {
+            @include d-box(520px, 100%, null, null);
+        }
+
+        div {
+            @include flex(center, center, 30px, column);
+            @include position(20%, 20%, 0, 0);
+            color: #fff;
+
+            h3 {
+                @include font(450, 50px, 60px, #e3d285, 30rem);
+                text-align: center;
+            }
+
+            button {
+                @include font(bold, 24px, null, #fff, null);
+                @include button(50px, 11.5rem, 10px, null, #94652b);
+                position: relative;
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+
+            button:before {
+                content: "";
+                position: absolute;
+                border-bottom: 3px solid #94652b;
+                width: 25%;
+                @include position(-10px, null, 0px, null);
+                transition: all 0.5s linear;
+            }
+
+            button:hover:before {
+                width: 100%;
+            }
+
+            button:after {
+                content: "";
+                position: absolute;
+                border-bottom: 3px solid #94652b;
+                width: 25%;
+                @include position(null, -10px, null, 0px);
+                transition: all 0.5s linear;
+            }
+
+            button:hover:after {
+                width: 100%;
+            }
+
+        }
+    }
+}
+}
