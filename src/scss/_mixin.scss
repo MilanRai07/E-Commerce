@@ -1,0 +1,15 @@
+@mixin flex($para1,$para2,$para3){
+    display: flex;
+    justify-content: $para1;
+    align-items: $para2;
+    gap:$para3
+}
+@mixin size($para1,$para2,$para3,$para4){
+    width:$para1;
+    height: $para2;
+    padding:$para3 $para4;
+}
+@mixin font($para1,$para2){
+    color:$para1;
+    font-size: $para2;
+}

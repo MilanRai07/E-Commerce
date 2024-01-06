@@ -1,0 +1,31 @@
+@import 'mixin.scss';
+.hamburger-container{
+    display: none;
+    div{
+        @include flex(center,center,null);
+        height: 40px;
+        width:100%;
+        border-bottom: 2px solid #e3d285;
+        background-color: #2e2e2e;
+        transition: 0.5s ease-in-out;
+        .hamburger-navlink{
+           text-decoration: none;
+           @include font(#fff, bold);
+        }
+    }
+    div:hover{
+        background-color: #3b3b3b;
+        .hamburger-navlink{
+            color:#e3d285;
+        }
+    }
+}
+.ham-active{
+    color:#e3d285;
+    text-decoration: none;
+   }
+   @media only screen and (max-width: 794px) {
+    .hamburger-container{
+        display: block;
+    } 
+   }

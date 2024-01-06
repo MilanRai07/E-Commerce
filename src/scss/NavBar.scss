@@ -1,0 +1,73 @@
+@import 'mixin.scss';
+
+* {
+  margin: 0;
+}
+
+.navbar-container {
+  @include flex(space-between, center, null);
+  @include size(null, 90px, 0px, 100px);
+  background-color: #181818;
+}
+
+.navbar-logo {
+  cursor: pointer;
+}
+
+.navbar-list {
+  list-style: none;
+  @include flex(space-between, center, 50px);
+  li {
+    :hover{
+     color: #e3d285;
+    }
+    cursor: pointer;
+    position: relative;
+    :before{
+      content: "";
+      position: absolute;
+      left:0;
+      top:120%;
+      width:0;
+      background-color:#e3d285;
+      transition: all 0.5s linear;
+      height: 2px;
+    }
+     :hover:before{
+      width: 100%;
+     }
+  }
+}
+.navlink {
+  @include font(#fff, bold);
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.active {
+  text-decoration: none;
+  color:#e3d285;
+}
+.ham-icon{
+  display: none;
+}
+@media only screen and (max-width:1044px){
+  .navbar-list{
+    gap:25px;
+  }
+}
+@media only screen and (max-width:869px){
+  .navbar-list{
+    gap:10px;
+  }
+}
+@media only screen and (max-width:794px){
+  .navbar-list{
+    li{
+      display: none;
+    }
+  }
+  .ham-icon{
+    display: block;
+  }
+}
