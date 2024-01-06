@@ -1,11 +1,11 @@
-import HomeImage from "./HomeImage";
+import EnrollImage from "./EnrollImage";
 import { Images } from '../Data/HomeImgData';
 import { useState } from "react";
-import '../scss/HomeImage.scss';
+import '../scss/EnrollImage.scss';
 import { ReactComponent as Left } from '../assets/left.svg';
 import { ReactComponent as Right } from '../assets/right.svg';
 
-const HomeIndex = () => {
+const EnrollIndex = () => {
   const [current, setCurrent] = useState(2);
 
   const LeftSlide = () => {
@@ -33,7 +33,7 @@ const HomeIndex = () => {
               return (
                 <div key={index} className={index === current ? 'active-img' : 'passive-img'}>
                   {index === current && (
-                    <HomeImage
+                    <EnrollImage
                       Id={id}
                       Img={img}
                       Title={title}
@@ -50,4 +50,4 @@ const HomeIndex = () => {
     </>
   )
 }
-export default HomeIndex;
+export default EnrollIndex;

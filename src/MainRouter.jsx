@@ -1,7 +1,7 @@
 import { Routes,Route } from 'react-router-dom';
 import NavBarIndex from './NavBar/NavBarIndex';
-import HomeIndex from './Home/HomeIndex';
 import Service from './Service';
+import HomeIndex from './HomeIndex';
 
 function MainRouter() {
   return (
