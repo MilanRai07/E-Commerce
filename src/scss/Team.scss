@@ -1,0 +1,66 @@
+@import 'mixin.scss';
+
+.team-container {
+    @include all-container();
+
+    .team-header {
+        @include all-header;
+    }
+
+    .team-card-container {
+        @include flex(center, null, 25px, null);
+        flex-wrap: wrap;
+        .team-card {
+            @include flex(null, null, 25px, column);
+            .team-img-container {
+                @include d-box(18rem, 240px, 10px, null);
+                border: 3px solid #808080;
+                min-height: 18rem;
+                border-bottom: 0px;
+                padding-bottom: 0px;
+
+                div {
+                    overflow: hidden;
+
+                    .team-img {
+                        width: 100%;
+                        height: 18rem;
+                        transition: 1s all ease-in-out;
+                    }
+
+                    .team-img:hover {
+                        transform: scale(1.2);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .team-name {
+                border: 3px solid #808080;
+                border-top: 0px;
+                @include d-box(115px, 240px, 10px, null);
+                @include flex(null, center, 10px, column);
+                padding-top: 0px;
+
+                h3 {
+                    @include font(bold, 23px, 36px, #24272E, null);
+                }
+
+                p {
+
+                    @include font(400, 18px, 24px, #667085, null);
+                   
+                }
+                .socialmedia-container{
+                    @include flex(center,center,20px,null);
+                    margin-top: 10px;
+                    .social-site:hover{
+                        cursor: pointer;
+                        filter: brightness(80%);  
+                    }
+                }
+            }
+           
+        }
+    }
+}
