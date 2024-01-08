@@ -1,16 +1,17 @@
 import { Routes,Route } from 'react-router-dom';
 import NavBarIndex from './NavBar/NavBarIndex';
-import Service from './Service';
 import HomeIndex from './HomeIndex';
+import ServiceIndex from './OurService/ServiceIndex';
 
 function MainRouter() {
   return (
    <Routes>
       <Route path='/' element={<NavBarIndex/>}>
        <Route index element={<HomeIndex/>}/>
-       <Route path='/service' element={<Service/>}/>
+       <Route path='/service' element={<ServiceIndex/>}/>
         </Route>
    </Routes>
+
   )
 }
 

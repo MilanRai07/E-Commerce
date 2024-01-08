@@ -2,8 +2,6 @@ import '../scss/Service.scss';
 import {ServiceData} from '../Data/ServiceData.jsx';
 import ServiceCard from './ServiceCard.jsx';
 const ServiceIndex=()=>{
-
-  console.log(ServiceData);
   return(
     <>
     <div className="service-container">
