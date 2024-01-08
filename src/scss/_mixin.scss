@@ -40,3 +40,21 @@
     cursor:pointer;
     border: none;
 }
+@mixin all-container{
+    margin-top: 7rem;
+    padding:0px 6rem;
+    @include flex(center,center,100px,column);
+    flex-wrap: wrap;
+}
+@mixin all-header{
+    @include flex(null,center, 20px,column);
+    flex-direction: column;
+    text-align: center;
+     h2 {
+        @include font(600, 40px, 40px, #24272E, null);
+    }
+
+    p {
+        @include font(400, 18px, 27px, #667085, null);
+    }
+}
