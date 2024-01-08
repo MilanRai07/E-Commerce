@@ -58,3 +58,8 @@
         @include font(400, 18px, 27px, #667085, null);
     }
 }
+@mixin image($para1,$para2){
+    width: 100%;
+    height:$para1;
+    object-fit: $para2;
+}

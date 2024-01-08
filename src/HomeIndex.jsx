@@ -1,3 +1,4 @@
+import Banner from "./Banner/Banner";
 import EnrollIndex from "./EnrollSection/EnrollIndex";
 import ServiceIndex from "./OurService/ServiceIndex";
 
@@ -6,6 +7,7 @@ const HomeIndex=()=>{
     <>
     <EnrollIndex/>
     <ServiceIndex/>
+    <Banner/>
     </>
   )
 }
