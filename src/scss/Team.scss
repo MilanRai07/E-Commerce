@@ -10,8 +10,10 @@
     .team-card-container {
         @include flex(center, null, 25px, null);
         flex-wrap: wrap;
+
         .team-card {
             @include flex(null, null, 25px, column);
+
             .team-img-container {
                 @include d-box(18rem, 240px, 10px, null);
                 border: 3px solid #808080;
@@ -49,18 +51,20 @@
                 p {
 
                     @include font(400, 18px, 24px, #667085, null);
-                   
+
                 }
-                .socialmedia-container{
-                    @include flex(center,center,20px,null);
+
+                .socialmedia-container {
+                    @include flex(center, center, 20px, null);
                     margin-top: 10px;
-                    .social-site:hover{
+
+                    .social-site:hover {
                         cursor: pointer;
-                        filter: brightness(80%);  
+                        filter: brightness(80%);
                     }
                 }
             }
-           
+
         }
     }
 }

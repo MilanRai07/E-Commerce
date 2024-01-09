@@ -63,3 +63,8 @@
     height:$para1;
     object-fit: $para2;
 }
+@mixin profileImg($para1,$para2){
+    width: $para1;
+    height:$para2;
+    border-radius: 50%;
+}

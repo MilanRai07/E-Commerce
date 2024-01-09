@@ -1,5 +1,5 @@
 import SocialMedia from "./SocialMedia";
-
+import React from 'react';
 const TeamCard = (props) => {
     const { Id, Img, Name, Post } = props;
     return (
@@ -14,7 +14,7 @@ const TeamCard = (props) => {
                     <h3>{Name}</h3>
 
                     <p>{Post}</p>
-                    <SocialMedia/>
+                    <SocialMedia />
                 </div>
             </div>
         </>

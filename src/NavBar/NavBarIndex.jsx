@@ -1,11 +1,11 @@
 import NavBar from "./NavBar";
+import React from 'react';
 
-
-const NavBarIndex=()=>{
- return(
+const NavBarIndex = () => {
+  return (
     <>
-      <NavBar/>
+      <NavBar />
     </>
- )
+  )
 }
 export default NavBarIndex;

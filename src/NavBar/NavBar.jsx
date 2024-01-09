@@ -1,3 +1,4 @@
+import React from 'react';
 import '../scss/NavBar.scss';
 import { NavLink, Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../assets/logo.svg";
@@ -6,7 +7,7 @@ import { useState } from 'react';
 import HamBurgerMenu from './HamburgerMenu';
 const NavBar = () => {
     const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
-    const ToggleHamburger=()=>{  //toggle hamburger menu nav
+    const ToggleHamburger = () => {  //toggle hamburger menu nav
         setShowHam(!showham);
     }
     return (
