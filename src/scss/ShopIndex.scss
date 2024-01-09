@@ -1,0 +1,98 @@
+@import 'mixin.scss';
+
+.shop-container {
+  // @include all-container();
+  margin-top: 7rem;
+  position: relative;
+
+  .shop-header {
+    @include all-header();
+
+    h2 {
+      @include font(600, 40px, 40px, #24272E, null);
+    }
+
+    p {
+      @include font(400, 18px, 27px, #667085, null);
+    }
+  }
+
+  .shop-card-container {
+    margin-top: 8rem;
+    padding: 0px 6rem;
+
+    .shop-slider {
+      @include flex(null, null, 40px, null);
+      overflow: hidden;
+      scroll-behavior: smooth;
+
+      .shop-card {
+        @include d-box(451px, 255px, null, 5px);
+        @include flex(null, center, 10px, column);
+        border: 2px solid #A9A9A9;
+
+        .shopimg-container {
+          overflow: hidden;
+
+          .shop-image {
+            object-fit: cover;
+            @include image(300px, null);
+            border-radius: 3px;
+            width: 255px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            transition: 1s all ease-in-out;
+          }
+
+          .shop-image:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        .shop-detail {
+          @include flex(null, center, 7px, column);
+
+          h3 {
+            @include font(600, 17px, 36px, #24272E, null);
+          }
+
+          p {
+            @include font(400, 15px, 24px, #636c7e, null);
+          }
+
+          button {
+            @include font(bold, 15px, null, #c7b66b, null);
+            @include button(50px, 257px, 10px, 5px, #282828);
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            margin-top: 11px;
+          }
+
+          button:hover {
+            background: #131313;
+          }
+        }
+      }
+    }
+  }
+
+  .left-scroll {
+    @include position(17%, null, 7%, null);
+    fill: #282828;
+
+    :hover {
+      cursor: pointer;
+      filter: brightness(50%);
+    }
+  }
+
+  .right-scroll {
+    @include position(17%, null, null, 7%);
+    fill: #282828;
+
+    :hover {
+      cursor: pointer;
+      filter: brightness(50%);
+    }
+  }
+}
