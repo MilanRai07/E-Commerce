@@ -22,7 +22,7 @@
     padding: 0px 6rem;
 
     .shop-slider {
-      @include flex(null, null, 40px, null);
+      @include flex(center, null, 40px, null);
       overflow: hidden;
       scroll-behavior: smooth;
 

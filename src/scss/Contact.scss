@@ -1,0 +1,88 @@
+@import 'mixin.scss';
+
+.contact-container {
+    margin-top: 7rem;
+    background-color: #181818;
+    min-height: 600px;
+    padding: 0px 6rem;
+   @include flex(center,null,100px,column);
+
+    .contact-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        h2 {
+            @include font(600, 40px, 40px, #c7b66b, null);
+        }
+
+        p {
+            @include font(400, 18px, 27px, #ad9f5e, null);
+        }
+    }
+
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+
+        .contact-map {
+            @include flex(null, null, 7px, column);
+
+            .svglocate {
+                margin-bottom: 1rem;
+            }
+
+            p {
+                @include font(400, 18px, 27px, #667085, null);
+            }
+        }
+
+        .form {
+            .form-box {
+                @include flex(null, null, 2rem, null);
+                min-height: 14rem;
+                max-height: 14rem;
+
+                .input-container {
+                    @include flex(space-between, null, null, column);
+                    min-height: 14rem;
+
+                    input {
+                        @include inputBox(2.5rem, 22rem, 5px, 5px);
+                        padding-left: 10px;
+                    }
+                    input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                .textbox-container {
+                    textarea {
+                        @include inputBox(13.2rem, 22rem, 5px, 5px);
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .button-div {
+                text-align: center;
+                margin-top: 2rem;
+
+                .form-button {
+                    @include font(bold, 20px, null, #ffff, null);
+                    @include button(50px, 19rem, 10px, 3px, #94652b);
+
+                    &:hover {
+                        background: #775122;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+}

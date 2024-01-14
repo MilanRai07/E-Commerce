@@ -67,4 +67,14 @@
     width: $para1;
     height:$para2;
     border-radius: 50%;
+
+}
+@mixin inputBox($para1,$para2,$para3,$para4){
+    border: 2px solid #fff;
+    resize: none;
+    @include d-box($para1,$para2,$para3,$para4);
+    &:focus{
+        outline: none;
+        border: 2.5px solid #81722d;
+    }
 }
