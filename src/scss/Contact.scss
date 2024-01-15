@@ -3,15 +3,12 @@
 .contact-container {
     margin-top: 7rem;
     background-color: #181818;
-    min-height: 600px;
-    padding: 0px 6rem;
-   @include flex(center,null,100px,column);
+    padding: 6rem 6rem;
+    @include flex(center,null,100px,column);
 
     .contact-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+
+        @include flex(center,center,20px,column);
 
         h2 {
             @include font(600, 40px, 40px, #c7b66b, null);
@@ -19,16 +16,16 @@
 
         p {
             @include font(400, 18px, 27px, #ad9f5e, null);
+            text-align: center;
         }
     }
 
     .contact-content {
-        display: flex;
-        justify-content: space-between;
-
+        @include flex(space-between,null,null,null);
+        flex-wrap: wrap;
         .contact-map {
             @include flex(null, null, 7px, column);
-
+            margin-bottom: 1rem;
             .svglocate {
                 margin-bottom: 1rem;
             }
@@ -38,12 +35,12 @@
             }
         }
 
-        .form {
+        form {
+            @include flex(center,center,2rem,column);
+            flex-wrap: wrap  !important;
             .form-box {
-                @include flex(null, null, 2rem, null);
-                min-height: 14rem;
-                max-height: 14rem;
-
+                @include flex(center, null, 2rem, null);
+                flex-wrap: wrap;
                 .input-container {
                     @include flex(space-between, null, null, column);
                     min-height: 14rem;
@@ -69,8 +66,6 @@
 
             .button-div {
                 text-align: center;
-                margin-top: 2rem;
-
                 .form-button {
                     @include font(bold, 20px, null, #ffff, null);
                     @include button(50px, 19rem, 10px, 3px, #94652b);
@@ -85,4 +80,47 @@
         }
     }
 
+}
+@media only screen and (max-width:1150px){
+    .contact-container {
+        .contact-content {
+              @include flex(center,null,2rem,null);
+              text-align: center;
+              .contact-map {
+                .svglocate {
+                    margin:0 auto;
+                }
+    
+            }
+        }
+    
+    }
+}
+@media only screen and (max-width:440px){
+    .contact-container {
+        .contact-content {
+            form {
+                .form-box {
+                    .input-container {
+                        input {
+                            @include inputBox(2.5rem, 13rem, 5px, 5px);
+                        }
+                    }
+    
+                    .textbox-container {
+                        textarea {
+                            @include inputBox(13.2rem, 13rem, 5px, 5px);
+                        }
+                    }
+                }
+    
+                .button-div {
+                    .form-button {
+                        @include button(50px, 13rem, 10px, 3px, #94652b);
+                    }
+                }
+            }
+        }
+    
+    }
 }

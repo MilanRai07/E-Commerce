@@ -8,11 +8,11 @@ const ShopIndex = () => {
 
   const LeftScroll = () => {
     var slide = document.getElementById("slide");
-    slide.scrollLeft = slide.scrollLeft - 500;
+    slide.scrollLeft = slide.scrollLeft - 300;
   }
   const RightScroll = () => {
     var slide = document.getElementById("slide");
-    slide.scrollLeft = slide.scrollLeft + 500;
+    slide.scrollLeft = slide.scrollLeft + 300;
   }
   return (
     <>

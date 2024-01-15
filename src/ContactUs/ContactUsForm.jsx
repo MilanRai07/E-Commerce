@@ -4,7 +4,7 @@ const ContactUsForm=()=>{
    return(
     <>
     <form>
-       <div className="form">
+    
            <div className="form-box">
                <div className="input-container">
                    <input type="text" placeholder="Name"></input>
@@ -18,7 +18,6 @@ const ContactUsForm=()=>{
            <div className="button-div">
             <button className="form-button">Submit</button>
            </div>
-       </div>
     </form>
     </>
    )
