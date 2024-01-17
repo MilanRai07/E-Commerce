@@ -1,10 +1,12 @@
 @import 'mixin.scss';
 .hamburger-container{
+   @include position(100%,null,0,null);
+    z-index:1;
+    width:100%;
     display: none;
     div{
         @include flex(center,center,null,null);
         height: 40px;
-        width:100%;
         border-bottom: 2px solid #e3d285;
         background-color: #2e2e2e;
         transition: 0.5s ease-in-out;
