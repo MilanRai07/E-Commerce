@@ -5,7 +5,6 @@ import TeamIndex from "./Team/TeamIndex";
 import React from 'react';
 import TestimonialIndex from "./Testimonial/TestimonialIndex";
 import ShopIndex from "./Shop/ShopIndex";
-import ContactIndex from "./ContactUs/ContactIndex";
 
 
 const HomeIndex = () => {
@@ -17,7 +16,6 @@ const HomeIndex = () => {
       <TeamIndex />
       <TestimonialIndex/>
       <ShopIndex/>
-      <ContactIndex/>
     </>
   )
 }

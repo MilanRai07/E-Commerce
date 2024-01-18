@@ -1,8 +1,8 @@
 import React from "react";
-import '../scss/Contact.scss';
+import '../scss/Footer.scss';
 import {ReactComponent as Map} from '../assets/map.svg';
 import ContactUsForm from "./ContactUsForm";
-const ContactIndex=()=>{
+const FooterIndex=()=>{
    return(
     <>
     <div className="contact-container">
@@ -26,4 +26,4 @@ const ContactIndex=()=>{
     </>
    )
 }
-export default ContactIndex;
+export default FooterIndex;

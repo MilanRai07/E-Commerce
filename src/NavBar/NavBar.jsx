@@ -3,6 +3,7 @@ import '../scss/NavBar.scss';
 import { NavLink, Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { ReactComponent as HamBurger } from "../assets/Ham.svg";
+import {ReactComponent as Cart } from '../assets/cart-icon.svg';
 import { useState } from 'react';
 import HamBurgerMenu from './HamburgerMenu';
 import { ParentData } from './NavBarIndex';
@@ -55,7 +56,10 @@ const NavBar = () => {
                         </li>
 
                         <HamBurger className='ham-icon' onClick={ToggleHamburger} />
-
+                        <div>
+                        <Cart className='cart-icon'/>
+                        <sup>{3}</sup>
+                        </div>
                     </ul>
                 </div>
                 {showham ?        //toggle hammenu by hamburger icon

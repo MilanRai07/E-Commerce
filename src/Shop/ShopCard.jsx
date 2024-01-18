@@ -1,6 +1,22 @@
+import { useContext, useState } from "react";
+import { CartData } from "./ShopIndex";
 
 const ShopCard = (props) => {
+    
+    const [addCart, setAddCard] = useState(true);
     const { Id, Img, Name, Price } = props;
+    const context =useContext(CartData);
+    const {addToCart, deleteCart} =context;
+
+    const addChildCart=(id)=>{
+        setAddCard(false);
+        addToCart(id);
+    }
+    const deleteChildCart=(id)=>{
+        setAddCard(true);
+        deleteCart(id)
+    }
+
     return (
         <>
             <div className="shop-card">
@@ -14,9 +30,15 @@ const ShopCard = (props) => {
                     <p>
                         {Price}
                     </p>
-                    <button>
-                        Own it now
+                    { addCart?
+                    <button onClick={()=>addChildCart(Id)}>
+                        Add to cart
                     </button>
+                    :
+                    <button onClick={()=>deleteChildCart(Id)}>
+                        Remove cart
+                    </button>
+                    }
                 </div>
             </div>
         </>
