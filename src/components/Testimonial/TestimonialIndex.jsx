@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Testimonial from "./Testimonial";
-import '../scss/Testimonial.scss';
-import { TeamData } from "../Data/TeamData";
-import {ReactComponent as Dot} from '../assets/dot.svg';
+import '../../scss/Testimonial.scss';
+import { TeamData } from "../../Data/TeamData";
+import {ReactComponent as Dot} from '../../assets/dot.svg';
 
 const TestimonialIndex = () => {
   const [current,setCurrent]=useState(0);

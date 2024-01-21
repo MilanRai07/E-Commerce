@@ -13,6 +13,7 @@
 }
 .fixed{
   position:fixed;
+  top:0%;
   z-index:1;
   width: 100%;
   box-sizing: border-box;
@@ -67,6 +68,11 @@
 }
 .cart-icon{
   cursor: pointer;
+  position: relative;
+}
+.cart-number{
+ @include position(20%,null,null,null);
+ @include font(450,null,null,#e3d285,null);
 }
 @media only screen and (max-width:1044px){
   .navbar-list{

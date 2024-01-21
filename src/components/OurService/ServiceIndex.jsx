@@ -1,6 +1,6 @@
 import React from 'react';
-import '../scss/Service.scss';
-import { ServiceData } from '../Data/ServiceData.jsx';
+import '../../scss/Service.scss';
+import { ServiceData } from '../../Data/ServiceData.jsx';
 import ServiceCard from './ServiceCard.jsx';
 const ServiceIndex = () => {
   return (

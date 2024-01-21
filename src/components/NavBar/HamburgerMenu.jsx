@@ -1,4 +1,4 @@
-import '../scss/HamBurger.scss';
+import '../../scss/HamBurger.scss';
 import React from 'react';
 import { NavLink } from "react-router-dom";
 const HamBurgerMenu = () => {

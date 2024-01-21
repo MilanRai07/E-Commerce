@@ -1,6 +1,5 @@
-import { useContext } from "react";
 
-const EnrollImage=(props)=>{
+const HeroImage=(props)=>{
     const {Id,Img,Title}=props;
   return(
     <>
@@ -14,4 +13,4 @@ const EnrollImage=(props)=>{
     </>
   )
 }
-export default EnrollImage;
+export default HeroImage;

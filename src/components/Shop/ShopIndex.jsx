@@ -1,9 +1,9 @@
 import React, { createContext, useState } from "react";
-import '../scss/ShopIndex.scss';
+import '../../scss/ShopIndex.scss';
 import ShopCard from "./ShopCard";
-import { ProductData } from "../Data/ProductData";
-import { ReactComponent as Left } from '../assets/left.svg';
-import { ReactComponent as Right } from '../assets/right.svg';
+import { ProductData } from "../../Data/ProductData";
+import { ReactComponent as Left } from '../../assets/left.svg';
+import { ReactComponent as Right } from '../../assets/right.svg';
 
 const CartData = createContext();
 

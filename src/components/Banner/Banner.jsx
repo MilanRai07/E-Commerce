@@ -1,6 +1,6 @@
-import '../scss/Banner.scss';
+import '../../scss/Banner.scss';
 import React from 'react';
-import shop1 from '../assets/shop2.jpg';
+import shop1 from '../../assets/shop2.jpg';
 const Banner = () => {
   return (
     <>

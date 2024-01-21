@@ -1,3 +1,4 @@
+
 import NavBar from "./NavBar";
 import React, { createContext, useEffect, useState } from 'react';
 const ParentData=createContext();
@@ -5,7 +6,7 @@ const NavBarIndex = () => {
   const [isNavFixed,setIsNavFixed]=useState(false);
   const handleScroll=()=>{
     const scrollPosition=window.scrollY;
-    const triggerPosition=450;
+    const triggerPosition=350;
     setIsNavFixed(scrollPosition>triggerPosition);
   }
   useEffect(()=>{
@@ -20,8 +21,11 @@ const NavBarIndex = () => {
   return (
     <>
     <ParentData.Provider value={value}>
+     
       <NavBar />
+   
     </ParentData.Provider>
+    
     </>
   )
 }

@@ -1,11 +1,11 @@
-import EnrollImage from "./EnrollImage";
-import { Images } from '../Data/HomeImgData';
+import EnrollImage from "./HeroImage";
+import { Images } from '../../Data/HomeImgData';
 import { useState } from "react";
-import '../scss/EnrollImage.scss';
-import { ReactComponent as Left } from '../assets/left.svg';
-import { ReactComponent as Right } from '../assets/right.svg';
+import '../../scss/HeroImage.scss';
+import { ReactComponent as Left } from '../../assets/left.svg';
+import { ReactComponent as Right } from '../../assets/right.svg';
 
-const EnrollIndex = () => {
+const HeroIndex = () => {
   const [current, setCurrent] = useState(2);
 
   const LeftSlide = () => {
@@ -50,4 +50,4 @@ const EnrollIndex = () => {
     </>
   )
 }
-export default EnrollIndex;
+export default HeroIndex;

@@ -1,21 +1,21 @@
-import Banner from "./Banner/Banner";
-import EnrollIndex from "./EnrollSection/EnrollIndex";
-import ServiceIndex from "./OurService/ServiceIndex";
-import TeamIndex from "./Team/TeamIndex";
+import ServiceIndex from "./components/OurService/ServiceIndex";
+import TeamIndex from "./components/Team/TeamIndex";
 import React from 'react';
-import TestimonialIndex from "./Testimonial/TestimonialIndex";
-import ShopIndex from "./Shop/ShopIndex";
+import TestimonialIndex from "./components/Testimonial/TestimonialIndex";
+import ShopIndex from "./components/Shop/ShopIndex";
+import Banner from "./components/Banner/Banner";
+import HeroIndex from "./components/HeroSection/HeroIndex";
 
 
 const HomeIndex = () => {
   return (
     <>
-      <EnrollIndex />
-      <ServiceIndex />
-      <Banner />
+      <HeroIndex/>
+     <ServiceIndex/>
+      <Banner/>
       <TeamIndex />
       <TestimonialIndex/>
-      <ShopIndex/>
+    <ShopIndex/>
     </>
   )
 }

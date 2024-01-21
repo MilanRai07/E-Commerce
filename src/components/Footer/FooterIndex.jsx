@@ -1,6 +1,6 @@
 import React from "react";
-import '../scss/Footer.scss';
-import {ReactComponent as Map} from '../assets/map.svg';
+import '../../scss/Footer.scss';
+import {ReactComponent as Map} from '../../assets/map.svg';
 import ContactUsForm from "./ContactUsForm";
 const FooterIndex=()=>{
    return(
