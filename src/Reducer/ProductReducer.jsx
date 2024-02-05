@@ -16,7 +16,6 @@ const ProductReducer=(state,action)=>{
                 newProducts:recentData
                 
             }
-  
     default:
        return state;
   }

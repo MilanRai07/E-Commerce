@@ -7,7 +7,10 @@ import {ReactComponent as Cart } from '../../assets/cart-icon.svg';
 import { useState } from 'react';
 import HamBurgerMenu from './HamburgerMenu';
 import { ParentData } from './NavBarIndex';
+import useAddCart from '../../CustomHooks/useAddCart';
+
 const NavBar = () => {
+    const {cartAmount}=useAddCart();
     const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
     const context=useContext(ParentData); //context api consuming
     const {isNavFixed}=context; //destructuring context
@@ -58,7 +61,7 @@ const NavBar = () => {
                         <HamBurger className='ham-icon' onClick={ToggleHamburger} />
                         <div>
                         <Cart className='cart-icon'/>
-                        <sup className='cart-number'>{3}</sup>
+                        <sup className='cart-number'>{cartAmount}</sup>
                         </div>
                     </ul>
                 </div>
