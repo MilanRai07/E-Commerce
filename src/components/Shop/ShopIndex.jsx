@@ -6,7 +6,7 @@ import { ReactComponent as Right } from '../../assets/right.svg';
 import useProductContext from "../../CustomHooks/useProductContext";
 
 const ShopIndex = () => {
-  const {isLoading,newProducts}=useProductContext();
+  const { isLoading, newProducts } = useProductContext();
   const LeftScroll = () => {   //click to scroll left
     var slide = document.getElementById("slide");
     slide.scrollLeft = slide.scrollLeft - 300;
@@ -15,7 +15,7 @@ const ShopIndex = () => {
     var slide = document.getElementById("slide");
     slide.scrollLeft = slide.scrollLeft + 300;
   }
-  
+
   return (
     <>
       <div className="shop-container">
@@ -26,25 +26,25 @@ const ShopIndex = () => {
         <div>
           <Left className='left-scroll' onClick={LeftScroll} />
         </div>
-          <div className='shop-card-container'>
-            <div id='slide' className="shop-slider">
-              {
-                newProducts.map((ele, index) => {
-                  const { id, img, name, price } = ele;
-                  return (
-                    <div key={index}>
-                      <ShopCard
-                        Id={id}
-                        Img={img}
-                        Name={name}
-                        Price={price}
-                      />
-                    </div>
-                  )
-                })
-              }
-            </div>
+        <div className='shop-card-container'>
+          <div id='slide' className="shop-slider">
+            {
+              newProducts.map((ele, index) => {
+                const { id, img, name, price } = ele;
+                return (
+                  <div key={index}>
+                    <ShopCard
+                      Id={id}
+                      Img={img}
+                      Name={name}
+                      Price={price}
+                    />
+                  </div>
+                )
+              })
+            }
           </div>
+        </div>
         <div>
           <Right className='right-scroll' onClick={RightScroll} />
         </div>

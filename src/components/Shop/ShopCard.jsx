@@ -2,17 +2,17 @@ import { useState } from "react";
 import useAddCart from "../../CustomHooks/useAddCart";
 
 const ShopCard = (props) => {
-    const {CartAmount}=useAddCart();
+    const { CartManage } = useAddCart();
     const [addCart, setAddCard] = useState(true);
     const { Id, Img, Name, Price } = props;
 
-    const addChildCart = (id) => {
+    const addChildCart = (Id, Img, Name, Price) => {
         setAddCard(false);
-        CartAmount('add',id);
+        CartManage('add', Id, Img, Name, Price);
     }
-    const deleteChildCart = (id) => {
+    const deleteChildCart = (Id, Img, Name, Price) => {
         setAddCard(true);
-        CartAmount('remove',id);
+        CartManage('remove', Id, Img, Name, Price);
     }
 
     return (
@@ -29,11 +29,11 @@ const ShopCard = (props) => {
                         {Price}
                     </p>
                     {addCart ?
-                        <button onClick={() => addChildCart(Id)}>
+                        <button onClick={() => addChildCart(Id, Img, Name, Price)}>
                             Add to cart
                         </button>
                         :
-                        <button onClick={() => deleteChildCart(Id)}>
+                        <button onClick={() => deleteChildCart(Id, Img, Name, Price)}>
                             Remove cart
                         </button>
                     }

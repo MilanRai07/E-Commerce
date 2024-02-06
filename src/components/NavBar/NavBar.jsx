@@ -3,17 +3,17 @@ import '../../scss/NavBar.scss';
 import { NavLink, Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as HamBurger } from "../../assets/Ham.svg";
-import {ReactComponent as Cart } from '../../assets/cart-icon.svg';
+import { ReactComponent as Cart } from '../../assets/cart-icon.svg';
 import { useState } from 'react';
 import HamBurgerMenu from './HamburgerMenu';
 import { ParentData } from './NavBarIndex';
 import useAddCart from '../../CustomHooks/useAddCart';
 
 const NavBar = () => {
-    const {cartAmount}=useAddCart();
+    const { cartAmount } = useAddCart();
     const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
-    const context=useContext(ParentData); //context api consuming
-    const {isNavFixed}=context; //destructuring context
+    const context = useContext(ParentData); //context api consuming
+    const { isNavFixed } = context; //destructuring context
 
 
     const ToggleHamburger = () => {  //toggle hamburger menu nav
@@ -21,7 +21,7 @@ const NavBar = () => {
     }
     return (
         <>
-            <div className={`navbar-container ${isNavFixed? 'fixed':''}`}>
+            <div className={`navbar-container ${isNavFixed ? 'fixed' : ''}`}>
                 <div className="navbar-logo">
                     <Logo className='logo' />
                 </div>
@@ -56,22 +56,23 @@ const NavBar = () => {
                             <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
                                 Contact Us
                             </NavLink>
-                        </li>
-
-                        <HamBurger className='ham-icon' onClick={ToggleHamburger} />
+                        </li> 
                         <div>
-                        <Cart className='cart-icon'/>
-                        <sup className='cart-number'>{cartAmount}</sup>
+                            <NavLink to='/cartItem'>
+                            <Cart className='cart-icon' />
+                            <sup className='cart-number'>{cartAmount}</sup>
+                            </NavLink>
                         </div>
+                        <HamBurger className='ham-icon' onClick={ToggleHamburger} />
                     </ul>
                 </div>
                 {showham ?        //toggle hammenu by hamburger icon
-                <HamBurgerMenu /> 
-                :
-                ""
-            }
+                    <HamBurgerMenu />
+                    :
+                    ""
+                }
             </div>
-            
+
             <Outlet />
         </>
     )

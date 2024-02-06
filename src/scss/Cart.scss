@@ -1,0 +1,28 @@
+@import 'mixin.scss';
+.cart-container{
+    margin-top: 20px;
+    @include flex(null,center, 20px,column);
+    text-align: center;
+    h1{
+        @include font(600, 40px, 40px, #24272E, null);
+    }
+    .cart-list{
+        background-color: aqua;
+        width:50rem;
+        .cart-heading{
+            @include flex(space-around,center,null,null);
+            @include font(600, 17px, 36px, #24272E, null);
+            height: 50px;
+        }
+        .cart-product{
+            @include flex(space-around,center,null,null);
+            .cart-image{
+                @include size(5rem,5rem,null,null);
+            }
+            .cart-quantity{
+                @include inputBox(2rem,2rem,2px,null);
+                border:1px solid #282828;
+            }
+        }
+    }
+}
