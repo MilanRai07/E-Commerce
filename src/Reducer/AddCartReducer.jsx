@@ -8,9 +8,6 @@ const AddCartReducer = (state, action) => {
     name: Name,
     price: Price,
     quantity: 1,
-    subTotal() {
-      return this.quantity * Price
-    }
   }
   switch (action.type) {
 
@@ -61,7 +58,7 @@ const AddCartReducer = (state, action) => {
         ...state,
         cart: decremented,
       }
-      
+
     case "INCREMENT":
       const incremented = state.cart.map(item => {
         if (item.id === searchId) {

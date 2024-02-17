@@ -6,24 +6,24 @@ import { ReactComponent as EmptyCart } from '../../../assets/emptyCart.svg';
 
 const CartIndex = () => {
   const { cart, Decrement, Increment, CartManage } = useAddCart();
-  const [cartSum, setCartSum] = useState();
-  const [shipping, setShipping] = useState(parseInt(150));
-  const [grandTotal, setGrandTotal] = useState();
   const [isCart, setIsCart] = useState(true);
+  const [cartTotal, setCartTotal] = useState();
+  const [shipping, setShipping] = useState(200);
 
   useEffect(() => {
-    const cartTotal = cart.reduce((accumulator, currentVal) => { //function to find the sum of subTotal method in the cart array  
-      return accumulator + currentVal.subTotal();
+    const getCartTotal = cart.reduce((accumulator, currentValue) => { //get the total price of all cart
+      let { price, quantity } = currentValue;
+      accumulator = accumulator + price * quantity;
+      return accumulator;
     }, 0)
-    setCartSum(cartTotal);
-    setGrandTotal(cartTotal - shipping);
+    setCartTotal(getCartTotal);
 
     if (cart.length !== 0) {   //show empty cart reminder or not in the cart page
       setIsCart(false)
     } else {
       setIsCart(true)
     }
-  })
+  }, [cart])
   return (
     <>
       {isCart ?
@@ -53,7 +53,6 @@ const CartIndex = () => {
                       image={image}
                       price={price}
                       quantity={quantity}
-                      subTotal={element.subTotal()}
                       Decrement={Decrement}
                       Increment={Increment}
                       CartManage={CartManage}
@@ -68,7 +67,7 @@ const CartIndex = () => {
             <div className="cart-total-table">
               <div>
                 <h4>Subtotal</h4>
-                <p>Nrs. {cartSum.toLocaleString()}</p>
+                <p>Nrs. {cartTotal.toLocaleString()}</p>
               </div>
               <div>
                 <h4>Shipping</h4>
@@ -76,7 +75,7 @@ const CartIndex = () => {
               </div>
               <div>
                 <h4>GrandTotal</h4>
-                <p>Nrs. {grandTotal.toLocaleString()}</p>
+                <p>Nrs. {cartTotal - shipping.toLocaleString()}</p>
               </div>
             </div>
             <div>
