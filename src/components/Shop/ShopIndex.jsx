@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../../scss/ShopIndex.scss';
 import ShopCard from "./ShopCard";
 import { ReactComponent as Left } from '../../assets/left.svg';
@@ -6,7 +6,7 @@ import { ReactComponent as Right } from '../../assets/right.svg';
 import useProductContext from "../../CustomHooks/useProductContext";
 
 const ShopIndex = () => {
-  const { isLoading, newProducts } = useProductContext();
+  const { newProducts } = useProductContext();
   const LeftScroll = () => {   //click to scroll left
     var slide = document.getElementById("slide");
     slide.scrollLeft = slide.scrollLeft - 300;
@@ -29,8 +29,8 @@ const ShopIndex = () => {
         <div className='shop-card-container'>
           <div id='slide' className="shop-slider">
             {
-              newProducts.map((ele, index) => {
-                const { id, img, name, price } = ele;
+              newProducts.map((element, index) => {
+                const { id, img, name, price } = element;
                 return (
                   <div key={index}>
                     <ShopCard

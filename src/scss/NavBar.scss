@@ -74,17 +74,17 @@
  @include position(20%,null,null,null);
  @include font(450,null,null,#e3d285,null);
 }
-@media only screen and (max-width:1044px){
+@media only screen and (max-width:1075px){
   .navbar-list{
     gap:25px;
   }
 }
-@media only screen and (max-width:869px){
+@media only screen and (max-width:925px){
   .navbar-list{
     gap:10px;
   }
 }
-@media only screen and (max-width:794px){
+@media only screen and (max-width:834px){
   .navbar-list{
     li{
       display: none;

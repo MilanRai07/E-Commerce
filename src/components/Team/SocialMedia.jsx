@@ -3,6 +3,7 @@ import { ReactComponent as Twit } from '../../assets/twitter.svg';
 import { ReactComponent as Link } from '../../assets/linkedin.svg';
 import { ReactComponent as Google } from '../../assets/google.svg';
 import React from 'react';
+
 const SocialMedia = () => {
     return (
         <>

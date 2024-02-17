@@ -1,5 +1,6 @@
 import SocialMedia from "./SocialMedia";
 import React from 'react';
+
 const TeamCard = (props) => {
     const { Id, Img, Name, Post } = props;
     return (

@@ -1,13 +1,15 @@
 import ServiceIndex from "./components/OurService/ServiceIndex";
 import TeamIndex from "./components/Team/TeamIndex";
-import React from 'react';
+import React, { useEffect } from 'react';
 import TestimonialIndex from "./components/Testimonial/TestimonialIndex";
 import ShopIndex from "./components/Shop/ShopIndex";
 import Banner from "./components/Banner/Banner";
 import HeroIndex from "./components/HeroSection/HeroIndex";
 
-
 const HomeIndex = () => {
+  useEffect(()=>{
+  window.scrollTo(0,0)
+  },[])
   return (
     <>
       <HeroIndex/>

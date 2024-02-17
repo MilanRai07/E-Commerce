@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import '../../scss/NavBar.scss';
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as HamBurger } from "../../assets/Ham.svg";
 import { ReactComponent as Cart } from '../../assets/cart-icon.svg';
@@ -10,10 +10,24 @@ import { ParentData } from './NavBarIndex';
 import useAddCart from '../../CustomHooks/useAddCart';
 
 const NavBar = () => {
-    const { cartAmount } = useAddCart();
+    const { cart } = useAddCart();
     const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
     const context = useContext(ParentData); //context api consuming
+    const [cartNumber, setCartNumber] = useState()
     const { isNavFixed } = context; //destructuring context
+
+    useEffect(() => {
+        if (cart.length === 0) {
+            setCartNumber(0)
+        } else if (cart.length === 1) {
+            setCartNumber(cart[0].quantity);
+        } else {
+            let one = cart.reduce((accumulator, currentVal) => {
+                return accumulator + currentVal.quantity
+            }, 0)
+            setCartNumber(one);
+        }
+    })
 
 
     const ToggleHamburger = () => {  //toggle hamburger menu nav
@@ -56,12 +70,12 @@ const NavBar = () => {
                             <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
                                 Contact Us
                             </NavLink>
-                        </li> 
+                        </li>
                         <div>
-                            <NavLink to='/cartItem'>
-                            <Cart className='cart-icon' />
-                            <sup className='cart-number'>{cartAmount}</sup>
-                            </NavLink>
+                            <Link to='/cartItem'>
+                                <Cart className='cart-icon' />
+                                <sup className='cart-number'>{cartNumber}</sup>
+                            </Link>
                         </div>
                         <HamBurger className='ham-icon' onClick={ToggleHamburger} />
                     </ul>

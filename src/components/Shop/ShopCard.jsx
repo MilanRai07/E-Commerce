@@ -6,13 +6,13 @@ const ShopCard = (props) => {
     const [addCart, setAddCard] = useState(true);
     const { Id, Img, Name, Price } = props;
 
-    const addChildCart = (Id, Img, Name, Price) => {
+    const addChildCart = (Id, Img, Name, Price) => {  //function to add the selected items in the cart array
         setAddCard(false);
         CartManage('add', Id, Img, Name, Price);
     }
-    const deleteChildCart = (Id, Img, Name, Price) => {
+    const deleteChildCart = (Id) => {     //function to delete selected items from the cart array
         setAddCard(true);
-        CartManage('remove', Id, Img, Name, Price);
+        CartManage('remove', Id);
     }
 
     return (
@@ -26,14 +26,14 @@ const ShopCard = (props) => {
                         {Name}
                     </h3>
                     <p>
-                        {Price}
+                        Nrs. {Price.toLocaleString()}
                     </p>
                     {addCart ?
                         <button onClick={() => addChildCart(Id, Img, Name, Price)}>
                             Add to cart
                         </button>
                         :
-                        <button onClick={() => deleteChildCart(Id, Img, Name, Price)}>
+                        <button onClick={() => deleteChildCart(Id)}>
                             Remove cart
                         </button>
                     }

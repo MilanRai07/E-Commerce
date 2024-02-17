@@ -2,6 +2,7 @@ import '../../scss/Team.scss';
 import TeamCard from './TeamCard';
 import { TeamData } from '../../Data/TeamData.jsx';
 import React from 'react';
+
 const TeamIndex = () => {
   return (
     <>

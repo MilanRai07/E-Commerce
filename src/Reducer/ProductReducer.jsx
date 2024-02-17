@@ -3,7 +3,6 @@ const ProductReducer=(state,action)=>{
     case "SET_LOADING":
         return{
             ...state,
-            isLoading:true
         };
         case "MY_API_DATA":
         const recentData=action.payload.filter((currElement)=>{
@@ -11,7 +10,6 @@ const ProductReducer=(state,action)=>{
         })
             return{
                 ...state,
-                isLoading:false,
                 products:action.payload,
                 newProducts:recentData
                 
