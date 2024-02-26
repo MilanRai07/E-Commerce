@@ -3,8 +3,10 @@ import Testimonial from "./Testimonial";
 import '../../scss/Testimonial.scss';
 import { TeamData } from "../../Data/TeamData";
 import { ReactComponent as Dot } from '../../assets/dot.svg';
+import useWindowScroll from "../../CustomHooks/useWindowScroll";
 
 const TestimonialIndex = () => {
+  useWindowScroll();
   const [current, setCurrent] = useState(0);
 
   const CurrentOne = () => {

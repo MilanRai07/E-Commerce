@@ -2,8 +2,10 @@ import '../../scss/Team.scss';
 import TeamCard from './TeamCard';
 import { TeamData } from '../../Data/TeamData.jsx';
 import React from 'react';
+import useWindowScroll from '../../CustomHooks/useWindowScroll.jsx';
 
 const TeamIndex = () => {
+  useWindowScroll();
   return (
     <>
       <div className="team-container">

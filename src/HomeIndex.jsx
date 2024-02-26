@@ -7,18 +7,16 @@ import Banner from "./components/Banner/Banner";
 import HeroIndex from "./components/HeroSection/HeroIndex";
 
 const HomeIndex = () => {
-  useEffect(()=>{
-  window.scrollTo(0,0)
-  },[])
-  return (
-    <>
-      <HeroIndex/>
-     <ServiceIndex/>
-      <Banner/>
-      <TeamIndex />
-      <TestimonialIndex/>
-    <ShopIndex/>
-    </>
+ 
+  return(
+  <>
+    <HeroIndex />
+    <ServiceIndex />
+    <Banner />
+    <TeamIndex />
+    <TestimonialIndex />
+    <ShopIndex />
+  </>
   )
 }
 export default HomeIndex;

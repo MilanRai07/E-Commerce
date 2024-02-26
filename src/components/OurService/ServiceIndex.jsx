@@ -2,7 +2,9 @@ import React from 'react';
 import '../../scss/Service.scss';
 import { ServiceData } from '../../Data/ServiceData.jsx';
 import ServiceCard from './ServiceCard.jsx';
+import useWindowScroll from '../../CustomHooks/useWindowScroll.jsx';
 const ServiceIndex = () => {
+  useWindowScroll();
   return (
     <>
       <div className="service-container">

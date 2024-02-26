@@ -16,7 +16,7 @@ const NavBar = () => {
     const [cartNumber, setCartNumber] = useState()
     const { isNavFixed } = context; //destructuring context
 
-    useEffect(() => {
+    useEffect(() => {  //function that returns number of total product in cart 
         if (cart.length === 0) {
             setCartNumber(0)
         } else if (cart.length === 1) {
@@ -52,23 +52,18 @@ const NavBar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
+                            <NavLink to='/team' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
                                 Team
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
+                            <NavLink to='/testimonial' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
                                 Testimonial
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
+                            <NavLink to='/shop' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
                                 Shop
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
-                                Contact Us
                             </NavLink>
                         </li>
                         <div>

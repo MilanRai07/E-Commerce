@@ -3,8 +3,10 @@ import useAddCart from "../../../CustomHooks/useAddCart";
 import '../../../scss/Cart.scss';
 import CartProduct from "./CartProduct";
 import { ReactComponent as EmptyCart } from '../../../assets/emptyCart.svg';
+import useWindowScroll from "../../../CustomHooks/useWindowScroll";
 
 const CartIndex = () => {
+  useWindowScroll();
   const { cart, Decrement, Increment, CartManage } = useAddCart();
   const [isCart, setIsCart] = useState(true);
   const [cartTotal, setCartTotal] = useState();

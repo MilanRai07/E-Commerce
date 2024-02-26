@@ -1,0 +1,23 @@
+@import 'mixin.scss';
+
+.formik-field {
+    textarea {
+        @include inputBox(13.2rem, 22rem, 5px, 5px);
+        padding-left: 10px;
+    }
+
+    input {
+        @include inputBox(2.5rem, 22rem, 5px, 5px);
+        padding-left: 10px;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .error {
+        color: red;
+    }
+}
