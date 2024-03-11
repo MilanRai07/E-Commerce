@@ -1,7 +1,6 @@
 @import 'mixin.scss';
 
 .shop-container {
-  // @include all-container();
   margin-top: 7rem;
   position: relative;
 
@@ -35,6 +34,7 @@
           overflow: hidden;
 
           .shop-image {
+            cursor: pointer;
             object-fit: cover;
             @include image(300px, null);
             border-radius: 3px;
@@ -54,6 +54,10 @@
 
           h3 {
             @include font(600, 17px, 36px, #24272E, null);
+            cursor: pointer;
+            &:hover{
+              color:#94652b;
+            }
           }
 
           p {

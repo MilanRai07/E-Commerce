@@ -1,4 +1,3 @@
-
 import NavBar from "./NavBar";
 import React, { createContext, useEffect, useState } from 'react';
 const ParentData = createContext();
@@ -22,11 +21,8 @@ const NavBarIndex = () => {
   return (
     <>
       <ParentData.Provider value={value}>
-
         <NavBar />
-
       </ParentData.Provider>
-
     </>
   )
 }

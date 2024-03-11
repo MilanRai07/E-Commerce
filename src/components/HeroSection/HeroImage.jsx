@@ -1,6 +1,6 @@
 
 const HeroImage = (props) => {
-  const { Id, Img, Title } = props;
+  const { Img, Title } = props;
   return (
     <>
       <div className="home-img">

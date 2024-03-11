@@ -1,15 +1,17 @@
-@mixin flex($para1,$para2,$para3,$para4){
+@mixin flex($para1, $para2, $para3, $para4) {
     display: flex;
     justify-content: $para1;
     align-items: $para2;
     gap: $para3;
     flex-direction: $para4;
 }
-@mixin size($para1,$para2,$para3,$para4){
-    width:$para1;
+
+@mixin size($para1, $para2, $para3, $para4) {
+    width: $para1;
     height: $para2;
-    padding:$para3 $para4;
+    padding: $para3 $para4;
 }
+
 @mixin font ($para1, $para2, $para3, $para4, $para5) {
     // for font styling
     font-weight: $para1;
@@ -18,39 +20,45 @@
     color: $para4;
     width: $para5;
 }
-@mixin position($para1,$para2,$para3,$para4){
-    position:absolute;
-    top:$para1;
-    bottom:$para2;
-    left:$para3;
+
+@mixin position($para1, $para2, $para3, $para4) {
+    position: absolute;
+    top: $para1;
+    bottom: $para2;
+    left: $para3;
     right: $para4;
 }
-@mixin d-box($para1,$para2,$para3,$para4){
-    height:$para1;
-    width:$para2;
+
+@mixin d-box($para1, $para2, $para3, $para4) {
+    height: $para1;
+    width: $para2;
     padding: $para3;
     border-radius: $para4;
 }
-@mixin button($para1,$para2,$para3,$para4,$para5){
-    height:$para1;
-    width:$para2;
+
+@mixin button($para1, $para2, $para3, $para4, $para5) {
+    height: $para1;
+    width: $para2;
     padding: $para3;
     border-radius: $para4;
     background-color: $para5;
-    cursor:pointer;
+    cursor: pointer;
     border: none;
 }
-@mixin all-container{
+
+@mixin all-container {
     margin-top: 7rem;
-    padding:0px 6rem;
-    @include flex(center,center,100px,column);
+    padding: 0px 6rem;
+    @include flex(center, center, 100px, column);
     flex-wrap: wrap;
 }
-@mixin all-header{
-    @include flex(null,center, 20px,column);
+
+@mixin all-header {
+    @include flex(null, center, 20px, column);
     flex-direction: column;
     text-align: center;
-     h2 {
+
+    h2 {
         @include font(600, 40px, 40px, #24272E, null);
     }
 
@@ -58,22 +66,26 @@
         @include font(400, 18px, 27px, #667085, null);
     }
 }
-@mixin image($para1,$para2){
+
+@mixin image($para1, $para2) {
     width: 100%;
-    height:$para1;
+    height: $para1;
     object-fit: $para2;
 }
-@mixin profileImg($para1,$para2){
+
+@mixin profileImg($para1, $para2) {
     width: $para1;
-    height:$para2;
+    height: $para2;
     border-radius: 50%;
 
 }
-@mixin inputBox($para1,$para2,$para3,$para4){
+
+@mixin inputBox($para1, $para2, $para3, $para4) {
     border: 2px solid #fff;
     resize: none;
-    @include d-box($para1,$para2,$para3,$para4);
-    &:focus{
+    @include d-box($para1, $para2, $para3, $para4);
+
+    &:focus {
         outline: none;
         border: 2.5px solid #81722d;
     }

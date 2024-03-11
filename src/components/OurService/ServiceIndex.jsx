@@ -19,7 +19,6 @@ const ServiceIndex = () => {
               return (
                 <div key={index}>
                   <ServiceCard
-                    Id={id}
                     Img={img}
                     Title={title}
                     Text={text}

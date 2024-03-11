@@ -1,7 +1,11 @@
 import { useState } from "react";
 import useAddCart from "../../CustomHooks/useAddCart";
+import useNavigateHook from "../../CustomHooks/useNavigateHook";
 
 const ShopCard = (props) => {
+    //custom hook for useNavigate function
+    const { Navigation } = useNavigateHook();
+
     const { CartManage } = useAddCart();
     const [addCart, setAddCard] = useState(true);
     const { Id, Img, Name, Price } = props;
@@ -18,11 +22,11 @@ const ShopCard = (props) => {
     return (
         <>
             <div className="shop-card">
-                <div className='shopimg-container'>
+                <div className='shopimg-container' onClick={() => Navigation(Id, Name)}>
                     <img src={Img} alt={Name} className="shop-image" ></img>
                 </div>
                 <div className="shop-detail">
-                    <h3>
+                    <h3 onClick={() => Navigation(Id, Name)}>
                         {Name}
                     </h3>
                     <p>

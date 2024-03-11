@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ReactComponent as Close } from '../../../assets/close.svg';
 import { ReactComponent as Plus } from '../../../assets/plus.svg';
 import { ReactComponent as Minus } from '../../../assets/minus.svg';
+import useNavigateHook from "../../../CustomHooks/useNavigateHook";
 const CartProduct = (props) => {
+    //custom hook calling for useNavgate function
+    const { Navigation } = useNavigateHook();
+
     const { id, name, image, price, quantity, Decrement, Increment, CartManage } = props;
 
     const quantityControl = (numb) => {   //function that allows quantity to stop at 1 while decrementing 
@@ -18,7 +22,7 @@ const CartProduct = (props) => {
             <div>
                 <Close className="product-remove" onClick={() => CartManage('remove', id)} />
             </div>
-            <div className="cart-product-head">
+            <div className="cart-product-head" onClick={() => Navigation(id, name)}>
                 <img src={image} className="cart-image"></img>
                 <p>{name}</p>
             </div>

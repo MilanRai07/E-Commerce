@@ -1,154 +1,199 @@
 @import 'mixin.scss';
-.emptyCart-container{
+
+.emptyCart-container {
     margin-top: 7rem;
-    @include flex(center,center,10px,column);
-    
-    h2{
+    @include flex(center, center, 10px, column);
+
+    h2 {
         @include font(600, 30px, 40px, #24272E, null);
     }
-    p{
+
+    p {
         @include font(400, 20px, 20px, #667085, null);
     }
 }
-.cart-container{
-    @include flex(null,center, 20px,column);
+
+.cart-container {
+    @include flex(null, center, 20px, column);
     margin: 0 auto;
     margin-top: 5rem;
-    h1{
+
+    h1 {
         @include font(600, 40px, 40px, #24272E, null);
     }
-    .cart-list{
+
+    .cart-list {
         border: 2px solid #929191;
         border-radius: 5px;
-        .cart-heading{
+
+        .cart-heading {
             text-align: center;
-            @include flex(null,center,20px,null);
+            @include flex(null, center, 20px, null);
             @include font(600, 17px, 36px, #24272E, null);
             height: 50px;
             border-bottom: 2px solid #808080;
-            p{
-                width:200px;
+
+            p {
+                width: 200px;
             }
-            p:nth-child(1){
+
+            p:nth-child(1) {
                 width: 320px;
             }
         }
-        .cart-product{
-            padding:null 20px;
+
+        .cart-product {
+            padding: null 20px;
             margin-top: 7px;
             display: flex;
             align-items: center;
-            gap:20px;
+            gap: 20px;
             text-align: center;
             @include font(600, 15px, 24px, rgb(87, 93, 105), null);
-            div{
-                width:200px;
+
+            div {
+                width: 200px;
             }
-            div:nth-child(1){
+
+            div:nth-child(1) {
                 text-align: left;
-                width:25px;
+                width: 25px;
             }
-            div:nth-child(4){
-               @include flex(center,center,10px,null);
-               .plus, .minus{
-                cursor: pointer;
-                filter: brightness(70%);
-               }
-               p{
-                font-weight: bold;
-               }
-            }
-            .product-remove{
-                cursor: pointer;
-                :hover{
-                    filter:brightness(50%);
+
+            div:nth-child(4) {
+                @include flex(center, center, 10px, null);
+
+                .plus,
+                .minus {
+                    cursor: pointer;
+                    filter: brightness(70%);
+                }
+
+                p {
+                    font-weight: bold;
                 }
             }
-            .cart-product-head{
+
+            .product-remove {
+                cursor: pointer;
+
+                :hover {
+                    filter: brightness(50%);
+                }
+            }
+
+            .cart-product-head {
                 width: 255px;
-                @include flex(null,center,25px,null);
-                .cart-image{
-                    @include size(5rem,5rem,null,null);
-                    min-width:5rem;
+                @include flex(null, center, 25px, null);
+
+                .cart-image {
+                    @include size(5rem, 5rem, null, null);
+                    min-width: 5rem;
+                    cursor: pointer;
+                }
+
+                p {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #94652b;
+                    }
                 }
             }
-            .cart-quantity{
-                @include inputBox(2rem,2rem,2px,null);
+
+            .cart-quantity {
+                @include inputBox(2rem, 2rem, 2px, null);
                 border: 2px solid #808080;
-                padding-left:1.5rem;
+                padding-left: 1.5rem;
             }
         }
     }
-    .cart-total{
-        @include flex(null,center,20px,column);
+
+    .cart-total {
+        @include flex(null, center, 20px, column);
         margin-top: 10px;
-        h2{
+
+        h2 {
             @include font(600, 20px, 20px, #24272E, null);
         }
-        .cart-total-table{
-            width:300px;
-            border:2px solid #929191;
+
+        .cart-total-table {
+            width: 300px;
+            border: 2px solid #929191;
             border-radius: 5px;
-            div{
-                @include flex(null,center,20px,null);
+
+            div {
+                @include flex(null, center, 20px, null);
                 border-bottom: 1px solid #929191;
-                padding:10px;
-                h4{
-                    width:100px;
+                padding: 10px;
+
+                h4 {
+                    width: 100px;
                     @include font(600, 17px, 36px, #24272E, null);
                 }
-                p{
+
+                p {
                     @include font(600, 15px, 24px, rgb(87, 93, 105), null);
                 }
             }
-            div:last-child{
+
+            div:last-child {
                 border-bottom: none;
-                p{
+
+                p {
                     font-weight: bold;
                 }
             }
         }
-        .cart-total-checkout{
+
+        .cart-total-checkout {
             @include font(600, 15px, null, #ffff, null);
             @include button(50px, 19rem, 10px, 3px, #94652b);
-            &:hover{
-             filter: brightness(90%);
+
+            &:hover {
+                filter: brightness(90%);
             }
         }
     }
 }
-@media only screen and (max-width:1072px){
-    .cart-container{
-        .cart-list{
-            width:50rem;
-            }
+
+@media only screen and (max-width:1072px) {
+    .cart-container {
+        .cart-list {
+            width: 50rem;
         }
+    }
 }
-@media only screen and (max-width:849px){
-    .cart-container{
-        .cart-list{
-            width:40rem;
-            }
+
+@media only screen and (max-width:849px) {
+    .cart-container {
+        .cart-list {
+            width: 40rem;
         }
+    }
 }
-@media only screen and (max-width:675px){
-    .cart-container{
-       
-        .cart-list{
+
+@media only screen and (max-width:675px) {
+    .cart-container {
+
+        .cart-list {
             justify-content: center;
-            width:20rem;
+            width: 20rem;
             border-bottom: none;
-            .cart-heading{
-                 display: none;
+
+            .cart-heading {
+                display: none;
             }
-            .cart-product{
+
+            .cart-product {
                 justify-content: center;
                 border-bottom: 2px solid #808080;
-               flex-wrap: wrap;
-                .cart-product-head{
-                     flex-direction: column;
+                flex-wrap: wrap;
+
+                .cart-product-head {
+                    flex-direction: column;
                 }
             }
         }
-}
+    }
 }

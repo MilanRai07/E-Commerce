@@ -9,7 +9,7 @@ import { AddCartProvider } from './ContextAPI/AddCartContext'
 ReactDOM.createRoot(document.getElementById('root')).render(
    <ProductProvider>
       <AddCartProvider>
-    <MainRouter/>
-    </AddCartProvider>
- </ProductProvider>
+            <MainRouter />
+      </AddCartProvider>
+   </ProductProvider>
 )

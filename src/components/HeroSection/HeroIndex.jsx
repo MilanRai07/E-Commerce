@@ -34,7 +34,6 @@ const HeroIndex = () => {
               <div key={index} className={index === current ? 'active-img' : 'passive-img'}>
                 {index === current && (
                   <EnrollImage
-                    Id={id}
                     Img={img}
                     Title={title}
                   />
