@@ -2,6 +2,7 @@
 
 .product-detail-container {
     margin-top: 7rem;
+    padding: 0px 5.5rem;
 
     .product-header {
         @include all-header();
@@ -18,10 +19,9 @@
     .product-detail {
         @include flex(space-around, null, null, null);
         margin-top: 8rem;
-        padding: 0px 6rem;
 
         .selected-product {
-            width: 45rem;
+            width: 50rem;
             padding: 10px;
             background-color: #f2f2f2;
 
@@ -33,6 +33,7 @@
                     .selected-product__image {
                         height: 25rem;
                         width: 20rem;
+                        object-fit: cover;
                         border-radius: 5px;
                     }
 
@@ -86,81 +87,29 @@
                 }
             }
         }
-    }
 
-    .related-products {
-        margin-top: 30px;
+        .related-products {
+            margin-top: 50px;
 
-        h2 {
-            @include font(600, 28px, 28px, #24272E, null);
-            margin-bottom: 20px;
-        }
-    }
-
-    .sub-product {
-        @include flex(space-around, null, null, column);
-        background-color: #f2f2f2;
-        padding: 10px;
-        width: 18rem;
-        height: 36rem;
-
-        .product {
             h2 {
-                @include font(600, 20px, 20px, #24272E, null);
-                text-align: center;
-                width: auto;
-                padding-bottom: 15px;
-                margin: 15px 0px;
-                border-bottom: 2px solid #94652b;
+                @include font(600, 28px, 28px, #24272E, null);
+                margin-bottom: 40px;
             }
 
-            .product-items {
-                @include flex(space-around, center, 20px, null);
-                padding: 14px 10px;
-                border-bottom: 1px solid #667085;
-
-                h3 {
-                    @include font(500, 17px, 19px, #24272E, null);
-                }
-
-                p {
-                    @include font(400, 13px, 24px, #667085, null);
-                }
-
-                .product-items__image {
-                    height: 2.7rem;
-                    width: 2.7rem;
-                }
-
-                &:last-child {
-                    border-bottom: none;
-                }
+            .card-container {
+                @include flex(null, null, 50px, null);
             }
         }
 
-        .category {
-            h2 {
-                @include font(600, 20px, 20px, #24272E, null);
-                text-align: center;
-                width: auto;
-                padding-bottom: 15px;
-                margin: 15px 0px;
-                border-bottom: 2px solid #94652b;
-            }
-
-            ul {
-                list-style: none;
-                @include flex(space-around, null, 15px, column);
-
-                li {
-                    @include font(500, 15px, 17px, #24272E, null);
-                    cursor: pointer;
-
-                    &:hover {
-                        color: #94652b;
-                    }
-                }
-            }
+        .sub-product {
+            @include flex(space-around, null, null, column);
+            background-color: #f2f2f2;
+            padding: 10px;
+            width: 18rem;
+            height: 36rem;
         }
+
     }
+
+
 }

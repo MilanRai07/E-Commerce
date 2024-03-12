@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { AddCart } from "../ContextAPI/AddCartContext"
 
-const useAddCart = () => {
+const useAddCartContext = () => {
     return useContext(AddCart)
 }
-export default useAddCart;
+export default useAddCartContext;

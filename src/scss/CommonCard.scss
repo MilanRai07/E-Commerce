@@ -1,0 +1,55 @@
+@import 'mixin.scss';
+
+.card {
+  @include d-box(351px, 230px, null, 5px);
+  @include flex(null, center, 10px, column);
+  border: 2px solid #A9A9A9;
+
+  .card-img__container {
+    overflow: hidden;
+
+    .card-image {
+      cursor: pointer;
+      object-fit: cover;
+      @include image(200px, 230px);
+      border-radius: 3px;
+      width: 230px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      transition: 1s all ease-in-out;
+    }
+
+    .card-image:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .card-detail {
+    @include flex(null, center, 7px, column);
+
+    h3 {
+      @include font(600, 17px, 36px, #24272E, null);
+      cursor: pointer;
+
+      &:hover {
+        color: #94652b;
+      }
+    }
+
+    p {
+      @include font(400, 15px, 24px, #636c7e, null);
+    }
+
+    button {
+      @include font(bold, 15px, null, #c7b66b, null);
+      @include button(50px, 232px, 10px, 5px, #282828);
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      margin-top: 11px;
+    }
+
+    button:hover {
+      background: #131313;
+    }
+  }
+}

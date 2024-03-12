@@ -32,7 +32,8 @@ export const ProductData = [
         'name': 'Pearl White Fender',
         'price': 135500,
         'detail': 'Fusce ac ante a dolor facilisis auctor. Pellentesque nunc orci, maximus eu tempus in, facilisis nec lorem. Duis id libero odio. Nam eu felis maximus, luctus dolor vitae, molestie erat. Donec suscipit efficitur fringilla. Suspendisse facilisis sagittis tristique. Morbi fringilla tortor ut mauris fermentum, in aliquet libero efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id diam vestibulum, rhoncus magna vitae, dictum ligula. In sagittis posuere massa. Pellentesque dignissim congue varius. Vivamus et luctus sem. In interdum a risus eu porttitor. Suspendisse sodales leo id orci tempor, sit amet porttitor lectus rutrum. Mauris iaculis, ex auctor pharetra egestas, tellus magna porttitor sapien, nec congue turpis arcu id dolor',
-        'category': 'guitar'
+        'category': 'guitar',
+        'recent': false
     },
     {
         id: 3,
@@ -49,7 +50,7 @@ export const ProductData = [
         'name': 'TAMA Snare',
         'price': 70000,
         'detail': 'Fusce ac ante a dolor facilisis auctor. Pellentesque nunc orci, maximus eu tempus in, facilisis nec lorem. Duis id libero odio. Nam eu felis maximus, luctus dolor vitae, molestie erat. Donec suscipit efficitur fringilla. Suspendisse facilisis sagittis tristique. Morbi fringilla tortor ut mauris fermentum, in aliquet libero efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id diam vestibulum, rhoncus magna vitae, dictum ligula. In sagittis posuere massa. Pellentesque dignissim congue varius. Vivamus et luctus sem. In interdum a risus eu porttitor. Suspendisse sodales leo id orci tempor, sit amet porttitor lectus rutrum. Mauris iaculis, ex auctor pharetra egestas, tellus magna porttitor sapien, nec congue turpis arcu id dolor',
-        'category': 'guitar',
+        'category': 'drum',
         'recent': true
     },
     {
@@ -58,7 +59,7 @@ export const ProductData = [
         'name': 'Bloddy Red Yamaha',
         'price': 200000,
         'detail': 'Fusce ac ante a dolor facilisis auctor. Pellentesque nunc orci, maximus eu tempus in, facilisis nec lorem. Duis id libero odio. Nam eu felis maximus, luctus dolor vitae, molestie erat. Donec suscipit efficitur fringilla. Suspendisse facilisis sagittis tristique. Morbi fringilla tortor ut mauris fermentum, in aliquet libero efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id diam vestibulum, rhoncus magna vitae, dictum ligula. In sagittis posuere massa. Pellentesque dignissim congue varius. Vivamus et luctus sem. In interdum a risus eu porttitor. Suspendisse sodales leo id orci tempor, sit amet porttitor lectus rutrum. Mauris iaculis, ex auctor pharetra egestas, tellus magna porttitor sapien, nec congue turpis arcu id dolor',
-        'category': 'drum'
+        'category': 'guitar'
     },
     {
         id: 6,

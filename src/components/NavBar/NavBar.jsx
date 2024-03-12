@@ -7,16 +7,17 @@ import { ReactComponent as Cart } from '../../assets/cart-icon.svg';
 import { useState } from 'react';
 import HamBurgerMenu from './HamburgerMenu';
 import { ParentData } from './NavBarIndex';
-import useAddCart from '../../CustomHooks/useAddCart';
+import useAddCartContext from '../../CustomHooks/useAddCartContext';
 
 const NavBar = () => {
-    const { cart } = useAddCart();
+    const { cart } = useAddCartContext();
     const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
     const context = useContext(ParentData); //context api consuming
     const [cartNumber, setCartNumber] = useState()
     const { isNavFixed } = context; //destructuring context
 
-    useEffect(() => {  //function that returns number of total product in cart 
+    //function that returns number of total product in cart 
+    useEffect(() => {
         if (cart.length === 0) {
             setCartNumber(0)
         } else if (cart.length === 1) {
@@ -28,7 +29,6 @@ const NavBar = () => {
             setCartNumber(one);
         }
     })
-
 
     const ToggleHamburger = () => {  //toggle hamburger menu nav
         setShowHam(!showham);

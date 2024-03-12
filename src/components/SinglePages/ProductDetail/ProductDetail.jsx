@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../../scss/ProductDetail.scss';
 import SelectedProduct from './SelectedProduct';
-import SubProduct from './SubProduct';
+import SideNavBar from '../../SideNavBar/SideNavbar';
+
 const ProductDetail = () => {
   return (
     <>
@@ -15,7 +16,7 @@ const ProductDetail = () => {
             <SelectedProduct />
           </div>
           <div className='sub-product'>
-            <SubProduct />
+            <SideNavBar />
           </div>
         </div>
       </div>

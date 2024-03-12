@@ -1,7 +1,8 @@
 import React from 'react'
-import Chris from '../../../assets/chris.jpg';
+import Chris from '../../assets/chris.jpg';
+import '../../scss/SideNavBar.scss';
 
-const SubProduct = () => {
+const SideNavBar = () => {
     return (
         <>
             <div className='product'>
@@ -48,4 +49,4 @@ const SubProduct = () => {
     )
 }
 
-export default SubProduct;
+export default SideNavBar;
