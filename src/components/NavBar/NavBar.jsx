@@ -15,6 +15,13 @@ const NavBar = () => {
     const context = useContext(ParentData); //context api consuming
     const [cartNumber, setCartNumber] = useState()
     const { isNavFixed } = context; //destructuring context
+    const [listItem, setListItem] = useState([
+        { path: '/', name: 'Home' },
+        { path: '/service', name: 'Service' },
+        { path: '/team', name: 'Team' },
+        { path: '/shop', name: 'Shop' },
+        { path: '/testimonial', name: 'Sign Up' },
+    ])
 
     //function that returns number of total product in cart 
     useEffect(() => {
@@ -41,31 +48,20 @@ const NavBar = () => {
                 </div>
                 <div>
                     <ul className='navbar-list'>
-                        <li>
-                            <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
-                                Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/service' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
-                                Our Service
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/team' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
-                                Team
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/testimonial' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
-                                Testimonial
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/shop' className={({ isActive }) => (isActive ? 'active' : 'navlink')}>
-                                Shop
-                            </NavLink>
-                        </li>
+                        {
+                            listItem.map((element, index) => {
+                                const { path, name } = element;
+                                return (
+                                    <li key={index}>
+                                        <NavLink to={path}
+                                            className={({ isActive }) => isActive ? 'active' : 'navlink'}
+                                        >
+                                            {name}
+                                        </NavLink>
+                                    </li>
+                                )
+                            })
+                        }
                         <div>
                             <Link to='/cartItem'>
                                 <Cart className='cart-icon' />
@@ -76,7 +72,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 {showham ?        //toggle hammenu by hamburger icon
-                    <HamBurgerMenu />
+                    <HamBurgerMenu ToggleHamburger={ToggleHamburger} listItem={listItem} />
                     :
                     ""
                 }

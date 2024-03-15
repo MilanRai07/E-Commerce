@@ -9,6 +9,7 @@ import TeamIndex from './components/Team/TeamIndex';
 import ShopIndex from './components/Shop/ShopIndex';
 import TestimonialIndex from './components/Testimonial/TestimonialIndex';
 import ProductDetail from './components/SinglePages/ProductDetail/ProductDetail';
+import ProductIndex from './components/Products/ProductIndex';
 
 function MainRouter() {
   return (
@@ -22,6 +23,7 @@ function MainRouter() {
           <Route path='/testimonial' element={<TestimonialIndex />} />
           <Route path='/cartItem' element={<CartIndex />} />
           <Route path='/product/:id/:name' element={<ProductDetail />} />
+          <Route path='/category/:category' element={<ProductIndex/>}/>
         </Route>
       </Routes>
       <FooterIndex />

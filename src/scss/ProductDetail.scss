@@ -17,8 +17,9 @@
     }
 
     .product-detail {
-        @include flex(space-around, null, null, null);
+        @include flex(space-between, null, null, null);
         margin-top: 8rem;
+        flex-wrap: wrap;
 
         .selected-product {
             width: 50rem;
@@ -28,7 +29,8 @@
             .selected-product__container {
 
                 div:nth-child(1) {
-                    @include flex(cenetr, null, 50px, null);
+                    @include flex(null, null, 50px, null);
+                    flex-wrap: wrap;
 
                     .selected-product__image {
                         height: 25rem;
@@ -39,6 +41,7 @@
 
                     .selected-product__headings {
                         @include flex(null, null, 20px, column);
+                        flex-wrap: wrap;
 
                         h2 {
                             @include font(600, 28px, 28px, #24272E, null);
@@ -97,19 +100,18 @@
             }
 
             .card-container {
-                @include flex(null, null, 50px, null);
+                @include flex(center, null, 49px, null);
+                flex-wrap: wrap;
             }
         }
 
-        .sub-product {
-            @include flex(space-around, null, null, column);
-            background-color: #f2f2f2;
-            padding: 10px;
-            width: 18rem;
-            height: 36rem;
-        }
-
     }
+}
 
-
+@media only screen and (max-width:850px) {
+    .selected-product__container {
+        div:nth-child(1) {
+            justify-content: center;
+        }
+    }
 }

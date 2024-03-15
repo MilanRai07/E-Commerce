@@ -1,60 +1,125 @@
 @import 'mixin.scss';
 
-.product {
-    h2 {
-        @include font(600, 20px, 20px, #24272E, null);
-        text-align: center;
-        width: auto;
-        padding-bottom: 15px;
-        margin: 15px 0px;
-        border-bottom: 2px solid #94652b;
+.sideNav-container {
+    @include flex(space-around, null, 10px, column);
+    background-color: #f2f2f2;
+    padding: 10px;
+    width: 18rem;
+    height: auto;
+
+    .product {
+        h2 {
+            @include font(600, 20px, 20px, #24272E, null);
+            text-align: center;
+            padding-bottom: 15px;
+            margin: 15px 0px;
+            border-bottom: 2px solid #94652b;
+        }
+
+        .product-items {
+            @include flex(space-between, null, null, null);
+            flex-wrap: wrap;
+            padding: 14px 10px;
+            border-bottom: 1px solid #667085;
+
+            h3 {
+                @include font(500, 17px, 19px, #24272E, null);
+                cursor: pointer;
+
+                &:hover {
+                    color: #94652b;
+                }
+            }
+
+            p {
+                @include font(400, 13px, 24px, #667085, null);
+            }
+
+            .product-items__image {
+                cursor: pointer;
+                height: 2.7rem;
+                width: 2.7rem;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
     }
 
-    .product-items {
-        @include flex(space-around, center, 20px, null);
-        padding: 14px 10px;
-        border-bottom: 1px solid #667085;
+    .category {
+        padding-bottom: 10px;
 
-        h3 {
-            @include font(500, 17px, 19px, #24272E, null);
+        h2 {
+            @include font(600, 20px, 20px, #24272E, null);
+            text-align: center;
+            padding-bottom: 15px;
+            margin: 15px 0px;
+            border-bottom: 2px solid #94652b;
         }
 
-        p {
-            @include font(400, 13px, 24px, #667085, null);
-        }
+        ul {
+            list-style: none;
+            @include flex(null, center, 15px, column);
+            padding: 0px;
 
-        .product-items__image {
-            height: 2.7rem;
-            width: 2.7rem;
-        }
+            li {
+                @include font(500, 15px, 17px, #24272E, null);
+                cursor: pointer;
 
-        &:last-child {
-            border-bottom: none;
+                &:hover {
+                    color: #94652b;
+                }
+            }
+
+            .activeElement {
+                color: #94652b;
+            }
         }
     }
 }
 
-.category {
-    h2 {
-        @include font(600, 20px, 20px, #24272E, null);
-        text-align: center;
-        width: auto;
-        padding-bottom: 15px;
-        margin: 15px 0px;
-        border-bottom: 2px solid #94652b;
-    }
+@media only screen and (max-width:1303px) {
+    .sideNav-container {
+        margin-top: 4rem;
+        width: 45rem;
+        background-color: #fff;
+        @include flex(center, null, 3rem, row);
 
-    ul {
-        list-style: none;
-        @include flex(space-around, null, 15px, column);
+        .product {
+            background-color: #f2f2f2;
+            width: 22rem;
+        }
 
-        li {
-            @include font(500, 15px, 17px, #24272E, null);
-            cursor: pointer;
+        .category {
+            background-color: #f2f2f2;
+            width: 22rem;
 
-            &:hover {
-                color: #94652b;
+            ul {
+                text-align: center;
             }
         }
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .sideNav-container {
+        width: 40rem;
+
+        .product {
+            width: 17rem;
+        }
+
+        .category {
+            width: 17rem;
+        }
+    }
+}
+
+@media only screen and (max-width:731px) {
+    .sideNav-container {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
     }
 }

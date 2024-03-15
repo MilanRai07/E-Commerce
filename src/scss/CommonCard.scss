@@ -1,17 +1,17 @@
 @import 'mixin.scss';
 
 .card {
-  @include d-box(351px, 230px, null, 5px);
+  @include d-box(340px, 230px, null, 5px);
   @include flex(null, center, 10px, column);
   border: 2px solid #A9A9A9;
 
   .card-img__container {
     overflow: hidden;
-
+     height:200px ;
     .card-image {
       cursor: pointer;
       object-fit: cover;
-      @include image(200px, 230px);
+      @include image(200px, cover);
       border-radius: 3px;
       width: 230px;
       border-bottom-right-radius: 0px;

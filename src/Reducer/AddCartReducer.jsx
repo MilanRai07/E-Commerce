@@ -50,7 +50,7 @@ const AddCartReducer = (state, action) => {
     case "DECREMENT":
       const decremented = state.cart.map(element => {
         if (element.id === searchId) {
-          return { ...element, ...updatedQuantity }; // Update the specific item
+          return { ...element, ...updatedQuantity }; // Update the specific item quanity by decreasing 
         }
         return element;
       });
@@ -62,7 +62,7 @@ const AddCartReducer = (state, action) => {
     case "INCREMENT":
       const incremented = state.cart.map(element => {
         if (element.id === searchId) {
-          return { ...element, ...updatedQuantity }; // Update the specific item
+          return { ...element, ...updatedQuantity }; // Update the specific item by increasing
         }
         return element;
       });

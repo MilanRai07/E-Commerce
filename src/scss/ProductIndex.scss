@@ -1,0 +1,99 @@
+@import 'mixin.scss';
+
+.product-container {
+    @include all-container();
+
+    .product-container__header {
+        @include all-header();
+
+        h2 {
+            @include font(600, 40px, 40px, #24272E, null);
+        }
+
+        p {
+            @include font(400, 18px, 27px, #667085, null);
+        }
+    }
+
+    .product-container__body {
+        @include flex(center, null, 50px, null);
+
+        .product-container__products {
+            @include flex(space-between, null, 49px, null);
+            flex-wrap: wrap;
+            padding: 10px;
+            width: 50rem;
+            min-height: 46rem;
+            padding: 10px;
+            background-color: #f2f2f2;
+
+        }
+    }
+}
+
+.topNavigation {
+    margin-top: -1rem !important;
+    margin-bottom: 3rem;
+}
+
+.navigation {
+    margin-top: 3rem;
+    padding: 0px 6rem;
+    @include flex(center, null, 15px, null);
+
+    button {
+        @include font(bold, 15px, null, #fff, null);
+        @include button(35px, 55px, 5px, 5px, #94652b);
+
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
+
+    .navigation-number {
+        @include flex(center, center, 10px, null);
+
+        p {
+            @include font(500, 17px, 19px, #94652b, null);
+            cursor: pointer;
+        }
+
+        .active-num {
+            color: #24272E;
+        }
+    }
+}
+
+@media only screen and (max-width:1303px) {
+    .product-container__body {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width:1030px) {
+    .product-container {
+        .product-container__body {
+            .product-container__products {
+                gap: 15px;
+                justify-content: center;
+                width: 46rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:947px) {
+    .product-container {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width:865px) {
+    .product-container {
+        .product-container__body {
+            .product-container__products {
+                width: 70%;
+            }
+        }
+    }
+}
