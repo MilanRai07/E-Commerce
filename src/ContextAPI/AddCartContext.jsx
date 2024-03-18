@@ -5,14 +5,12 @@ const AddCart = createContext();
 
 const GetLocalCartData = () => {
     let localCartData = localStorage.getItem('localCart');
-    if (localCartData.length === 0) {
-        return []
-    } else {
-        return JSON.parse(localCartData);
+    if (localCartData) {
+        return JSON.parse(localCartData)
     }
 }
 const initialState = {  //initial state for usereducer
-    cart: GetLocalCartData(),
+    cart: GetLocalCartData()
 }
 const AddCartProvider = ({ children }) => {
     //usereducer hook here
@@ -29,7 +27,6 @@ const AddCartProvider = ({ children }) => {
     useEffect(() => {
         //set the cart added to the localstorage where key is "localCart"
         localStorage.setItem('localCart', JSON.stringify(state.cart));
-
     }, [state.cart])
 
     const Decrement = (searchId, updatedQuantity) => {  //for decreasing product quantity
