@@ -6,7 +6,7 @@ import { ReactComponent as Right } from '../../assets/right.svg';
 import useProductContext from "../../CustomHooks/useProductContext";
 
 const ShopIndex = () => {
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   const { newProducts } = useProductContext();
   const LeftScroll = () => {   //click to scroll left
     var slide = document.getElementById("slide");

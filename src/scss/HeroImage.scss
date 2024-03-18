@@ -1,6 +1,7 @@
 @import 'mixin.scss';
 
 .home-container {
+    @include fade();
     @include d-box(520px, 100%, null, null);
     position: relative;
 
@@ -22,9 +23,10 @@
         height: 520px;
 
         .home-img {
+
             img {
                 @include d-box(520px, 100%, null, null);
-                filter:brightness(20%);
+                filter: brightness(20%);
             }
 
             div {
@@ -80,23 +82,26 @@
 
     .active-img {
         opacity: 1;
-        transition-duration: 1s;
+        transition-duration: 1.5s;
     }
-    .passive-img{
-        opacity:0.9;
+
+    .passive-img {
+        opacity: 0.5;
         transition-duration: 1s;
     }
 }
-@media only screen and (max-width:649px){
-    
+
+@media only screen and (max-width:649px) {
+
     .home-container {
         .left-slide {
             @include position(80%, null, 7%, null);
         }
-    
+
         .right-slide {
             @include position(80%, null, null, 7%);
         }
+
         .homeimg-container {
             .home-img {
                 div {

@@ -4,7 +4,7 @@ import shop3 from '../assets/shop3.jpg';
 export const Images = [
     {
         id: 0,
-        'img':shop1,
+        'img': shop1,
         'title': 'Be an artist. Create your own art.'
     },
     {

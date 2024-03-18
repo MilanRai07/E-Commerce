@@ -1,7 +1,8 @@
 @import'mixin.scss';
 
 .product-detail-container {
-    margin:6rem 0;
+    @include fade();
+    margin: 6rem 0;
     padding: 0px 5.5rem;
 
     .product-header {

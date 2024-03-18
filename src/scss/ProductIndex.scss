@@ -2,6 +2,7 @@
 
 .product-container {
     @include all-container();
+    @include fade();
 
     .product-container__header {
         @include all-header();
@@ -35,7 +36,8 @@
     margin-top: -1rem !important;
     margin-bottom: 3rem;
 }
-.bottomPage{
+
+.bottomPage {
     margin-bottom: 6rem;
 }
 

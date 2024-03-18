@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import useAddCartContext from "../../../CustomHooks/useAddCartContext";
 import '../../../scss/Cart.scss';
 import CartProduct from "./CartProduct";
-import { ReactComponent as EmptyCart } from '../../../assets/emptyCart.svg';
 import useWindowScroll from "../../../CustomHooks/useWindowScroll";
+import EmptyCard from "./EmptyCard";
 
 const CartIndex = () => {
   useWindowScroll();
@@ -25,15 +25,12 @@ const CartIndex = () => {
     } else {
       setIsCart(true)
     }
-    window.scrollTo(0,0)
   }, [cart])
   return (
     <>
       {isCart ?
         <div className="emptyCart-container">
-          <EmptyCart />
-          <h2>looks like your cart is empty</h2>
-          <p>Take your time to roam around and make choice of yours</p>
+          <EmptyCard />
         </div>
         :
         <div className="cart-container">

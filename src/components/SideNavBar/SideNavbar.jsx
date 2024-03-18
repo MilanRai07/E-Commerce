@@ -7,7 +7,7 @@ const SideNavBar = (props) => {
     const { Navigation } = useNavigateHook();
     const { otherData, category } = props;
     const [categoryList, setCategoryList] = useState(['Guitar', 'Drum', 'Processor', 'Others']);
-    
+
     //route to products single page
     let path = useNavigate();
     const RouteToCategory = (category) => {

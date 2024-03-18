@@ -10,8 +10,8 @@ const CommonCard = (props) => {
 
     //custom hook for addcart boolean value to show whether button shows add cart or remove cart
     // and funciton that add to product to cart o rremove from cart
-    const {addCartShow, addInCart,deleteFromCart}=useCartController();
-   
+    const { addCartShow, addInCart, deleteFromCart } = useCartController();
+
     return (
         <>
             <div className="card">

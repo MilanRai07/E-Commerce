@@ -25,6 +25,7 @@
       @include flex(null, null, 40px, null);
       overflow: hidden;
       scroll-behavior: smooth;
+      @include from-right();
 
       .shop-card {
         @include d-box(451px, 255px, null, 5px);
@@ -56,8 +57,9 @@
           h3 {
             @include font(600, 17px, 36px, #24272E, null);
             cursor: pointer;
-            &:hover{
-              color:#94652b;
+
+            &:hover {
+              color: #94652b;
             }
           }
 

@@ -22,7 +22,7 @@ const onSubmit = (values, onSubmitProps) => {
     }, 2500)
 }
 const SIgnUpForm = () => {
-    const [logerror,setLogerror]=useState(false);
+    const [logerror, setLogerror] = useState(false);
     return (
         <>
             <div className='form'>
@@ -65,24 +65,24 @@ const SIgnUpForm = () => {
                     }
                 </Formik>
                 <div>
-                    <p>already have an account? 
-                        <span 
-                        onMouseEnter={()=>setLogerror(true)}
-                        onMouseLeave={()=>setLogerror(false)}
+                    <p>already have an account?
+                        <span
+                            onMouseEnter={() => setLogerror(true)}
+                            onMouseLeave={() => setLogerror(false)}
                         >
-                        log in
+                            log in
                         </span>
-                        </p>
+                    </p>
                     {
-                       logerror?
-                       <div>
-                        <p>Login feature is not available at the moment</p>  
-                       </div>
-                       :
-                       ''
+                        logerror ?
+                            <div>
+                                <p>Login feature is not available at the moment</p>
+                            </div>
+                            :
+                            ''
                     }
                 </div>
-                
+
             </div>
         </>
     )

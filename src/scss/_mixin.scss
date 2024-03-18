@@ -60,10 +60,12 @@
 
     h2 {
         @include font(600, 40px, 40px, #24272E, null);
+        @include from-left();
     }
 
     p {
         @include font(400, 18px, 27px, #667085, null);
+        @include come-up();
     }
 }
 
@@ -89,4 +91,82 @@
         outline: none;
         border: 2.5px solid #81722d;
     }
+}
+
+@mixin fade {
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    animation: fade 1s;
+}
+
+@mixin come-down {
+    @keyframes down {
+        0% {
+            opacity: 0;
+            transform: (translateY(-30px))
+        }
+
+        100% {
+            opacity: 1;
+            transform: (translateY(0px));
+        }
+    }
+
+    animation: down 0.7s;
+}
+
+@mixin from-left {
+    @keyframes left {
+        0% {
+            opacity: 0;
+            transform: (translateX(-30px))
+        }
+
+        100% {
+            opacity: 1;
+            transform: (translateX(0px));
+        }
+    }
+
+    animation: left 1s;
+}
+
+@mixin from-right {
+    @keyframes right {
+        0% {
+            opacity: 0;
+            transform: (translateX(30px))
+        }
+
+        100% {
+            opacity: 1;
+            transform: (translateX(0px));
+        }
+    }
+
+    animation: right 1s;
+}
+
+@mixin come-up {
+    @keyframes come-up {
+        0% {
+            opacity: 0;
+            transform: (translateY(30px))
+        }
+
+        100% {
+            opacity: 1;
+            transform: (translateY(0px));
+        }
+    }
+
+    animation: come-up 1s;
 }

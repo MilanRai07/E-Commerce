@@ -1,38 +1,43 @@
 @import 'mixin.scss';
 
-.banner-container{
+.banner-container {
     @include all-container();
-    padding:0px;
-    position:relative;
-    .banner-img{
-        @include image(350px,cover);
-        filter:brightness(20%);
-        
+    padding: 0px;
+    position: relative;
+
+    .banner-img {
+        @include image(350px, cover);
+        filter: brightness(20%);
     }
-    .banner-content{
-        @include flex(center,center,35px,column);
+
+    .banner-content {
+        @include flex(center, center, 35px, column);
         text-align: center;
-        @include position(0,0,0,0);
+        @include position(0, 0, 0, 0);
         flex-wrap: wrap;
-        h3{
+
+        h3 {
             @include font(600, 40px, 40px, #c7b66b, 33rem);
         }
-        button{
+
+        button {
             @include font(bold, 20px, null, #ffff, null);
             @include button(50px, 19rem, 10px, 3px, #94652b);
         }
-        button:hover{
-            background:#775122;
+
+        button:hover {
+            background: #775122;
         }
-    } 
+    }
 }
-@media only screen and (max-width:600px){
-    .banner-container{
-        .banner-content{
-            h3{
-                width:300px;
-                font-size:35px;
+
+@media only screen and (max-width:600px) {
+    .banner-container {
+        .banner-content {
+            h3 {
+                width: 300px;
+                font-size: 35px;
             }
-        } 
+        }
     }
 }

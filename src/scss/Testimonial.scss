@@ -1,45 +1,55 @@
 @import 'mixin.scss';
-.testimonial-container{
-    @include all-container();
-    gap:50px;
-    background-color: #181818;
-    min-height:550px;
-    .testimonial-card{
-        @include flex(center,center,15px,column);
 
-        img{
-            @include profileImg(100px,100px);
-            border:4px solid #928549;
+.testimonial-container {
+    @include all-container();
+    gap: 50px;
+    background-color: #181818;
+    min-height: 550px;
+
+    .testimonial-card {
+        @include fade();
+        @include flex(center, center, 15px, column);
+
+        img {
+            @include profileImg(100px, 100px);
+            border: 4px solid #928549;
         }
-        h2{
+
+        h2 {
             @include font(bold, 23px, 36px, #e3d285, null);
         }
-        .p1{
-                @include font(400, 16px, 36px, #e3d285, null);
-                filter: brightness(70%);
+
+        .p1 {
+            @include font(400, 16px, 36px, #e3d285, null);
+            filter: brightness(70%);
         }
-        .p2{
+
+        .p2 {
             @include font(400, 15px, 30px, #e3d285, 500px);
             filter: brightness(80%);
             text-align: center;
+        }
     }
-    }
-    .testimonial-indicator{
-        @include flex(center,center,10px,null);
-        .indicator{
+
+    .testimonial-indicator {
+        @include flex(center, center, 10px, null);
+
+        .indicator {
             cursor: pointer;
         }
-        .active-indicator{
+
+        .active-indicator {
             filter: brightness(50%);
         }
     }
 }
-@media only screen and (max-width:650px){
-    .testimonial-container{
-        .testimonial-card{
-            .p2{
-               width:300px;
-        }
+
+@media only screen and (max-width:650px) {
+    .testimonial-container {
+        .testimonial-card {
+            .p2 {
+                width: 300px;
+            }
         }
     }
 }

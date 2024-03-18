@@ -8,6 +8,7 @@
     }
 
     .team-card-container {
+        @include from-right();
         @include flex(center, null, 25px, null);
         flex-wrap: wrap;
 

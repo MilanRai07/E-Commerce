@@ -5,16 +5,19 @@
 }
 
 .navbar-container {
-  @include flex(space-between, center, null,null);
+  @include flex(space-between, center, null, null);
   @include size(null, 90px, 0px, 100px);
   transition: top 0.3s;
   background-color: #181818;
-  position:relative;
+  position: relative;
+
 }
-.fixed{
-  position:fixed;
-  top:0%;
-  z-index:1;
+
+.fixed {
+  @include come-down();
+  position: fixed;
+  top: 0%;
+  z-index: 1;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid #c7b66b;
@@ -26,71 +29,85 @@
 
 .navbar-list {
   list-style: none;
-  @include flex(space-between, center, 50px,null);
+  @include flex(space-between, center, 50px, null);
+
   li {
-    :hover{
-     color: #e3d285;
+    :hover {
+      color: #e3d285;
     }
+
     cursor: pointer;
     position: relative;
-    :before{
+
+    :before {
       content: "";
-      @include position(120%,null,0,null);
-      @include d-box(2px,0,null,null);
-      background-color:#e3d285;
+      @include position(120%, null, 0, null);
+      @include d-box(2px, 0, null, null);
+      background-color: #e3d285;
       transition: all 0.5s linear;
     }
-     :hover:before{
+
+    :hover:before {
       width: 100%;
-     }
+    }
   }
 }
+
 .navlink {
-  @include font(450,null,null,#e3d285,null);
+  @include font(450, null, null, #e3d285, null);
   text-decoration: none;
   padding-bottom: 10px;
 }
+
 .active {
   text-decoration: none;
-  color:#c7b66b;
+  color: #c7b66b;
   font-weight: 500;
 }
-.active:after{
+
+.active:after {
   content: "";
-  @include position(120%,null,0,null);
-  @include d-box(2px,100%,null,null);
-  background-color:#e3d285;
+  @include position(120%, null, 0, null);
+  @include d-box(2px, 100%, null, null);
+  background-color: #e3d285;
   transition: all 0.5s linear;
 }
-.ham-icon{
+
+.ham-icon {
   display: none;
   cursor: pointer;
 }
-.cart-icon{
+
+.cart-icon {
   cursor: pointer;
   position: relative;
 }
-.cart-number{
- @include position(20%,null,null,null);
- @include font(450,null,null,#e3d285,null);
+
+.cart-number {
+  @include position(20%, null, null, null);
+  @include font(450, null, null, #e3d285, null);
 }
-@media only screen and (max-width:1075px){
-  .navbar-list{
-    gap:25px;
+
+@media only screen and (max-width:1075px) {
+  .navbar-list {
+    gap: 25px;
   }
 }
-@media only screen and (max-width:925px){
-  .navbar-list{
-    gap:10px;
+
+@media only screen and (max-width:925px) {
+  .navbar-list {
+    gap: 10px;
   }
 }
-@media only screen and (max-width:834px){
-  .navbar-list{
-    li{
+
+@media only screen and (max-width:834px) {
+  .navbar-list {
+    li {
       display: none;
     }
   }
-  .ham-icon{
+
+  .ham-icon {
     display: block;
   }
 }

@@ -1,6 +1,7 @@
 @import 'mixin.scss';
 
 .signup-container {
+   @include fade();
    @include size(100%, 100vh, null, null);
    position: relative;
 
@@ -44,9 +45,11 @@
          p {
             margin-top: 1rem;
             @include font(400, 18px, 27px, #a16c2b, null);
-            span{
+
+            span {
                cursor: pointer;
-               &:hover{
+
+               &:hover {
                   filter: brightness(70%);
                }
             }

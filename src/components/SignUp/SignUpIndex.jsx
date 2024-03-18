@@ -4,7 +4,7 @@ import SIgnUpForm from './SIgnUpForm';
 import background from '../../assets/particle.mp4';
 
 const SignUpIndex = () => {
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   return (
     <>
       <div className='signup-container'>

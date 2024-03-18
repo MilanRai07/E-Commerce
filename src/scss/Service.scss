@@ -1,39 +1,50 @@
 @import 'mixin.scss';
 
-.service-container{
-  @include all-container();
-    .service-header{
-       @include all-header();
-         h2 {
+.service-container {
+    @include all-container();
+
+    .service-header {
+        @include all-header();
+
+        h2 {
             @include font(600, 40px, 40px, #24272E, null);
+            @include from-left();
         }
 
         p {
             @include font(400, 18px, 27px, #667085, null);
+            @include come-up();
         }
     }
-    .service-card-container{
-        @include flex(center,null,25px,null);
+
+    .service-card-container {
+        @include from-right();
+        @include flex(center, null, 25px, null);
         flex-wrap: wrap;
-        .service-card{
-            @include flex(null,center,15px,column);
-            @include d-box(218px,265px,null,null);
-            div:nth-child(1){
+
+        .service-card {
+            @include flex(null, center, 15px, column);
+            @include d-box(218px, 265px, null, null);
+
+            div:nth-child(1) {
                 cursor: pointer;
-                :hover{
+
+                :hover {
                     transform: scale(1.3);
                     transition: all 1s ease-in-out;
                 }
             }
-            h3{
+
+            h3 {
                 @include font(600, 17px, 36px, #24272E, null);
             }
-            p{
+
+            p {
 
                 @include font(400, 15px, 24px, #667085, null);
                 text-align: center;
             }
         }
-        
+
     }
 }
