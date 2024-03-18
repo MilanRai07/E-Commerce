@@ -20,7 +20,7 @@ const NavBar = () => {
         { path: '/service', name: 'Service' },
         { path: '/team', name: 'Team' },
         { path: '/shop', name: 'Shop' },
-        { path: '/testimonial', name: 'Sign Up' },
+        { path: '/signup', name: 'Sign up' },
     ])
 
     //function that returns number of total product in cart 

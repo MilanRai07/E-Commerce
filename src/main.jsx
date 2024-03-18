@@ -5,11 +5,10 @@ import MainRouter from './MainRouter'
 import { ProductProvider } from './ContextAPI/ProductContext'
 import { AddCartProvider } from './ContextAPI/AddCartContext'
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
    <ProductProvider>
       <AddCartProvider>
-            <MainRouter />
+         <MainRouter />
       </AddCartProvider>
    </ProductProvider>
 )

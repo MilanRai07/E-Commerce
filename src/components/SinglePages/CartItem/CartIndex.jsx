@@ -25,6 +25,7 @@ const CartIndex = () => {
     } else {
       setIsCart(true)
     }
+    window.scrollTo(0,0)
   }, [cart])
   return (
     <>

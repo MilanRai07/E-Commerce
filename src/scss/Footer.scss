@@ -1,7 +1,6 @@
 @import 'mixin.scss';
 
 .contact-container {
-    margin-top: 7rem;
     background-color: #181818;
     padding: 6rem 6rem;
     @include flex(center, null, 100px, column);

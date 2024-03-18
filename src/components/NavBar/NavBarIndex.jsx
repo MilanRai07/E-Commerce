@@ -6,7 +6,7 @@ const NavBarIndex = () => {
 
   const handleScroll = () => {           //function that makes sure wether to show
     const scrollPosition = window.scrollY; //navbar at top fixed after 350px of scroll down
-    const triggerPosition = 350;
+    const triggerPosition = 380;
     setIsNavFixed(scrollPosition > triggerPosition);
   }
   useEffect(() => {

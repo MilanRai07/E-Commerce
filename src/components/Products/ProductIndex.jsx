@@ -108,7 +108,7 @@ const ProductIndex = () => {
           </div>
         </div>
       }
-      <div className='navigation'>
+      <div className='navigation bottomPage' >
         <button onClick={prev}>Prev</button>
         <div className='navigation-number'>
           <Pagination numb={numb} currentPage={currentPage} changePage={changePage} />

@@ -1,0 +1,64 @@
+@import 'mixin.scss';
+
+.signup-container {
+   @include size(100%, 100vh, null, null);
+   position: relative;
+
+   video {
+      @include image(100%, cover);
+   }
+
+   .signup-form {
+      text-align: center;
+      @include d-box(31rem, 28rem, null, 5px);
+      @include position(55%, null, 50%, null);
+      transform: translate(-50%, -50%);
+
+      .form {
+         padding: 2rem 0;
+
+         .form-items {
+            @include flex(null, null, 10px, column);
+
+            input {
+               background-color: transparent;
+               color: #a16c2b;
+               border-color: #282828;
+
+               &:focus {
+                  border-color: #a16c2b;
+               }
+            }
+         }
+
+         button {
+            margin: 10px auto 0;
+            @include font(bold, 20px, null, #ffff, null);
+            @include button(50px, 23rem, 10px, 3px, #a16c2b);
+
+            &:hover {
+               filter: brightness(70%);
+            }
+         }
+
+         p {
+            margin-top: 1rem;
+            @include font(400, 18px, 27px, #a16c2b, null);
+            span{
+               cursor: pointer;
+               &:hover{
+                  filter: brightness(70%);
+               }
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (max-width:505px) {
+   .signup-container {
+      .signup-form {
+         width: 25rem;
+      }
+   }
+}

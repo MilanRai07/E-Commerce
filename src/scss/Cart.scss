@@ -1,7 +1,7 @@
 @import 'mixin.scss';
 
 .emptyCart-container {
-    margin-top: 7rem;
+    margin: 6rem 0;
     @include flex(center, center, 10px, column);
 
     h2 {
@@ -16,7 +16,7 @@
 .cart-container {
     @include flex(null, center, 20px, column);
     margin: 0 auto;
-    margin-top: 5rem;
+    margin:6rem 0;
 
     h1 {
         @include font(600, 40px, 40px, #24272E, null);

@@ -47,7 +47,7 @@
 }
 
 @mixin all-container {
-    margin-top: 6rem;
+    margin: 6rem 0;
     padding: 0px 6rem;
     @include flex(center, center, 100px, column);
     flex-wrap: wrap;
