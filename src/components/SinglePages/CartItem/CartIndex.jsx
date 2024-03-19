@@ -11,7 +11,7 @@ const CartIndex = () => {
   const [isCart, setIsCart] = useState(true);
   const [cartTotal, setCartTotal] = useState();
   const [shipping, setShipping] = useState(200);
-
+  
   useEffect(() => {
     const getCartTotal = cart.reduce((accumulator, currentValue) => { //get the total price of all cart
       let { price, quantity } = currentValue;

@@ -5,8 +5,10 @@ const AddCart = createContext();
 
 const GetLocalCartData = () => {
     let localCartData = localStorage.getItem('localCart');
-    if (localCartData) {
+    if (localCartData !== undefined) {
         return JSON.parse(localCartData)
+    } else {
+        return []
     }
 }
 const initialState = {  //initial state for usereducer

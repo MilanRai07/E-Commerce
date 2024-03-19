@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import React from 'react';
 import NavBarIndex from './components/NavBar/NavBarIndex';
 import HomeIndex from './HomeIndex';
@@ -14,7 +14,7 @@ import SignUpIndex from './components/SignUp/SignUpIndex';
 
 function MainRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<NavBarIndex />}>
           <Route index element={<HomeIndex />} />
@@ -29,7 +29,7 @@ function MainRouter() {
         </Route>
       </Routes>
       <FooterIndex />
-    </BrowserRouter>
+    </HashRouter>
 
   )
 }

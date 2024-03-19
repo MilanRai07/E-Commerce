@@ -170,3 +170,22 @@
 
     animation: come-up 1s;
 }
+@mixin spinner($para1,$para2){
+    margin-top: 15px;
+    display:inline-block; 
+    width: $para1;
+    height: $para1;
+    border-radius: 50%;
+    box-shadow:1.5px 0 0 1.5px $para2 ;
+}
+@mixin rotate($para1, $para2){
+    @keyframes rotate {
+        0%{
+
+        }
+        100%{
+            transform: rotate($para2);
+        }
+    }
+    animation:rotate $para1 linear infinite;
+}
