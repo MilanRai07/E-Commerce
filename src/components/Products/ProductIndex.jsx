@@ -100,6 +100,13 @@ const ProductIndex = () => {
                     )
                   })
                 }
+                <div className='navigation bottomPage' >
+                  <button onClick={prev}>Prev</button>
+                  <div className='navigation-number'>
+                    <Pagination numb={numb} currentPage={currentPage} changePage={changePage} />
+                  </div>
+                  <button onClick={next}>Next</button>
+                </div>
               </div>
               <div className='product-container__sideNav'>
                 <SideNavBar otherData={otherData} category={category} />
@@ -108,13 +115,7 @@ const ProductIndex = () => {
           </div>
         </div>
       }
-      <div className='navigation bottomPage' >
-        <button onClick={prev}>Prev</button>
-        <div className='navigation-number'>
-          <Pagination numb={numb} currentPage={currentPage} changePage={changePage} />
-        </div>
-        <button onClick={next}>Next</button>
-      </div>
+
     </>
   )
 }
