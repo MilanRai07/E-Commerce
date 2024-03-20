@@ -6,12 +6,81 @@
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MilanMusic</title>
-  <script type="module" crossorigin src="/E-Commerce/assets/index-P8Amt1tB.js"></script>
-  <link rel="stylesheet" crossorigin href="/E-Commerce/assets/index-sJeejki0.css">
+  <style>
+    * {
+      margin: 0;
+    }
+
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      background-color: #282828;
+    }
+
+    .loader-1 {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 1.5px 0 0 1.5px #c7b66b;
+      animation: spin 2s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader-2 {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      box-shadow: 1.5px 0 0 1.5px #dad9d4;
+      animation: spin 1s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader-3 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 1.5px 0 0 1.5px #dabc36;
+      animation: spin 0.5ss linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/E-Commerce/assets/index-5zfh63Oz.js"></script>
+  <link rel="stylesheet" crossorigin href="/E-Commerce/assets/index-jv45uQio.css">
 </head>
 
 <body>
+  <div class="loader-container">
+    <div class="loader-1">
+      <div class="loader-2">
+        <div class="loader-3">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="root"></div>
+
+  <!-- Load React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
 </body>
 
 </html>
