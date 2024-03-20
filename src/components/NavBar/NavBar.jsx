@@ -13,7 +13,7 @@ const NavBar = () => {
     const { cart } = useAddCartContext();
     const [showham, setShowHam] = useState(false);  //for showing and not showng hamburger nav menu
     const context = useContext(ParentData); //context api consuming
-    const [cartNumber, setCartNumber] = useState()
+    const [cartNumber, setCartNumber] = useState(0)
     const { isNavFixed } = context; //destructuring context
     const [listItem, setListItem] = useState([
         { path: '/', name: 'Home' },

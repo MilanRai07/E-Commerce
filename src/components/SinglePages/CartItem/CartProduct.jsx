@@ -35,7 +35,7 @@ const CartProduct = (props) => {
                 <Minus className="minus" onClick={() => Decrement(id, { quantity: quantityControl(quantity) })} />
             </div>
             <div>
-                <p>Nrs. {price * quantity.toLocaleString()}</p>
+                <p>Nrs. {(price * quantity).toLocaleString()}</p>
             </div>
         </>
     )

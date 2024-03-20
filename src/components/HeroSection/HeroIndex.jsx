@@ -29,7 +29,7 @@ const HeroIndex = () => {
         <Left className="left-slide" onClick={LeftSlide} />
         <div className="homeimg-container">
           {Images.map((ele, index) => {
-            const { id, img, title } = ele;
+            const { img, title } = ele;
             return (
               <div key={index} className={index === current ? 'active-img' : 'passive-img'}>
                 {index === current && (

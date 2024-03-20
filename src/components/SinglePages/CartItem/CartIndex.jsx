@@ -8,31 +8,24 @@ import EmptyCard from "./EmptyCard";
 const CartIndex = () => {
   useWindowScroll();
   const { cart, Decrement, Increment, CartManage } = useAddCartContext();
-  const [isCart, setIsCart] = useState(true);
   const [cartTotal, setCartTotal] = useState();
   const [shipping, setShipping] = useState(200);
-  
+  const [subTotal, setSubTotal] = useState();
+
   useEffect(() => {
     const getCartTotal = cart.reduce((accumulator, currentValue) => { //get the total price of all cart
       let { price, quantity } = currentValue;
       accumulator = accumulator + price * quantity;
       return accumulator;
     }, 0)
-    setCartTotal(getCartTotal);
-
-    if (cart.length !== 0) {   //show empty cart reminder or not in the cart page
-      setIsCart(false)
-    } else {
-      setIsCart(true)
-    }
+    setCartTotal(getCartTotal.toLocaleString());
+    setSubTotal((getCartTotal - shipping).toLocaleString());
   }, [cart])
-  return (
-    <>
-      {isCart ?
-        <div className="emptyCart-container">
-          <EmptyCard />
-        </div>
-        :
+
+  //if cart has data, render the cart table or empty showing page
+  if (cart.length !== 0) {
+    return (
+      <>
         <div className="cart-container">
           <h1>Cart</h1>
           <div className="cart-list">
@@ -67,7 +60,7 @@ const CartIndex = () => {
             <div className="cart-total-table">
               <div>
                 <h4>Subtotal</h4>
-                <p>Nrs. {cartTotal.toLocaleString()}</p>
+                <p>Nrs. {cartTotal}</p>
               </div>
               <div>
                 <h4>Shipping</h4>
@@ -75,7 +68,7 @@ const CartIndex = () => {
               </div>
               <div>
                 <h4>GrandTotal</h4>
-                <p>Nrs. {cartTotal - shipping.toLocaleString()}</p>
+                <p>Nrs. {subTotal}</p>
               </div>
             </div>
             <div>
@@ -83,8 +76,14 @@ const CartIndex = () => {
             </div>
           </div>
         </div>
-      }
-    </>
-  )
+      </>
+    )
+  } else {
+    return (
+      <div className="emptyCart-container">
+        <EmptyCard />
+      </div>
+    )
+  }
 }
 export default CartIndex;

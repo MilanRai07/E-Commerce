@@ -12,3 +12,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </AddCartProvider>
    </ProductProvider>
 )
+document.querySelector('.loader-container').style.display = 'none';

@@ -32,7 +32,7 @@ const ProductDetail = () => {
     let relatedCategory = excludeSelectededProduct.filter((element) => {
       return element.category === selectedCategory;
     })
-
+  
     setRelatedData(relatedCategory.slice(1, 4));
 
     //getting otherproducts by fltering selectedProduct and related products
@@ -42,7 +42,6 @@ const ProductDetail = () => {
     const difference = [...array1].filter(
       (element) => !array2.has(element)
     );
-
     setOtherData(difference)
     setIsLoading(false)
   }, [id])

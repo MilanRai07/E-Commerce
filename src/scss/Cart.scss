@@ -22,11 +22,13 @@
 
     h1 {
         @include font(600, 40px, 40px, #24272E, null);
+        @include from-left();
     }
 
     .cart-list {
         border: 2px solid #929191;
         border-radius: 5px;
+        @include from-right();
 
         .cart-heading {
             text-align: center;
@@ -114,6 +116,7 @@
     .cart-total {
         @include flex(null, center, 20px, column);
         margin-top: 10px;
+        @include fade();
 
         h2 {
             @include font(600, 20px, 20px, #24272E, null);
