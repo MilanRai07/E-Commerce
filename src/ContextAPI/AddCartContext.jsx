@@ -5,11 +5,11 @@ const AddCart = createContext();
 
 const GetLocalCartData = () => {
     let localCartData = localStorage.getItem('localCart');
-        if(localCartData!==null && localCartData!==undefined){
-            return JSON.parse(localCartData)
-        }else{
-            return []
-        }
+    if (localCartData !== null && localCartData !== undefined) {
+        return JSON.parse(localCartData)
+    } else {
+        return []
+    }
 }
 const initialState = {  //initial state for usereducer
     cart: GetLocalCartData()
@@ -27,8 +27,12 @@ const AddCartProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        //set the cart added to the localstorage where key is "localCart"
-        localStorage.setItem('localCart', JSON.stringify(state.cart));
+        //set the cart added to the localstorage where key is "localCart"'
+        if (state.cart === null && state.cart === undefined) {
+            localStorage.setItem('localCart', JSON.stringify([]))
+        } else {
+            localStorage.setItem('localCart', JSON.stringify(state.cart));
+        }
     }, [state.cart])
 
     const Decrement = (searchId, updatedQuantity) => {  //for decreasing product quantity
