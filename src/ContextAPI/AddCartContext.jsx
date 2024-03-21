@@ -5,14 +5,11 @@ const AddCart = createContext();
 
 const GetLocalCartData = () => {
     let localCartData = localStorage.getItem('localCart');
-    if (localCartData !== null && localCartData !== undefined) {
-        return JSON.parse(localCartData)
-    } else {
-        return []
-    }
+    return JSON.parse(localCartData)
 }
 const initialState = {  //initial state for usereducer
-    cart: GetLocalCartData()
+    cart: GetLocalCartData(),
+    check: GetLocalCartData()
 }
 const AddCartProvider = ({ children }) => {
     //usereducer hook here
@@ -28,10 +25,10 @@ const AddCartProvider = ({ children }) => {
 
     useEffect(() => {
         //set the cart added to the localstorage where key is "localCart"'
-        if (state.cart === null && state.cart === undefined) {
-            localStorage.setItem('localCart', JSON.stringify([]))
-        } else {
+        if (state.cart !== undefined) {
             localStorage.setItem('localCart', JSON.stringify(state.cart));
+        } else {
+            console.log('trying to set undefined value')
         }
     }, [state.cart])
 
