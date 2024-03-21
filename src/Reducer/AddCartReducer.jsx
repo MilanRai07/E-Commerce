@@ -12,29 +12,36 @@ const AddCartReducer = (state, action) => {
   switch (action.type) {
 
     case "ADD_CART":
-      const existedItem = state.cart.find((element) => {   //check the if the selected element is alrady existed
-        return element.id === Id;
-      })
-      if (existedItem) {
-        const updatedProduct = state.cart.map((element) => {
-          if (element.id === Id) {
-            const updatedQuantity = element.quantity + 1;
-            return {
-              ...element,
-              quantity: updatedQuantity   //if existed item then just add the quantity not the item  
-            }
-          } else {
-            return element
-          }
+      if (state.cart !== null) { //only run below code if cart is not null
+        const existedItem = state.cart.find((element) => {   //check the if the selected element is alrady existed
+          return element.id === Id;
         })
-        return {
-          ...state,
-          cart: updatedProduct
+        if (existedItem) {
+          const updatedProduct = state.cart.map((element) => {
+            if (element.id === Id) {
+              const updatedQuantity = element.quantity + 1;
+              return {
+                ...element,
+                quantity: updatedQuantity   //if existed item then just add the quantity not the item  
+              }
+            } else {
+              return element
+            }
+          })
+          return {
+            ...state,
+            cart: updatedProduct
+          }
+        } else {
+          return {
+            ...state,
+            cart: [...state.cart, cartProducts],
+          }
         }
       } else {
-        return {
+        return { //if cart is null just add the cartProduct into cart
           ...state,
-          cart: [...state.cart, cartProducts],
+          cart: [cartProducts]
         }
       }
 

@@ -9,7 +9,6 @@ const GetLocalCartData = () => {
 }
 const initialState = {  //initial state for usereducer
     cart: GetLocalCartData(),
-    check: GetLocalCartData()
 }
 const AddCartProvider = ({ children }) => {
     //usereducer hook here

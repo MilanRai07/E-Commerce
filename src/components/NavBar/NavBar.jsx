@@ -25,17 +25,19 @@ const NavBar = () => {
 
     //function that returns number of total product in cart 
     useEffect(() => {
-        if (cart.length === 0) {
-            setCartNumber(0)
-        } else if (cart.length === 1) {
-            setCartNumber(cart[0].quantity);
+        if (cart !== null && cart.length !== 0) {
+            if (cart.length === 1) {
+                setCartNumber(cart[0].quantity);
+            } else {
+                let one = cart.reduce((accumulator, currentVal) => {
+                    return accumulator + currentVal.quantity
+                }, 0)
+                setCartNumber(one);
+            }
         } else {
-            let one = cart.reduce((accumulator, currentVal) => {
-                return accumulator + currentVal.quantity
-            }, 0)
-            setCartNumber(one);
+            setCartNumber(0);
         }
-    })
+    }, [cart])
 
     const ToggleHamburger = () => {  //toggle hamburger menu nav
         setShowHam(!showham);
