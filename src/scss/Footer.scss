@@ -87,31 +87,77 @@
     }
 }
 
-@media only screen and (max-width:440px) {
+@media only screen and (max-width:500px) {
     .contact-container {
+        gap: 50px;
+
+        .contact-header {
+            @include header-small();
+
+            h2 {
+                color: #c7b66b;
+            }
+
+            p {
+                color: #ad9f5e;
+            }
+        }
+
         .contact-content {
-            form {
+            .contact-map {
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+
+            Form {
+
                 .form-box {
+                    gap: 1rem;
+
                     .input-container {
+                        min-height: 11rem;
+
                         input {
-                            @include inputBox(2.5rem, 13rem, 5px, 5px);
+                            @include inputBox(2rem, 13rem, 5px, 5px);
                         }
                     }
 
                     .textbox-container {
                         textarea {
-                            @include inputBox(13.2rem, 13rem, 5px, 5px);
+                            @include inputBox(12rem, 13rem, 5px, 5px);
                         }
                     }
                 }
 
                 .button-div {
                     .form-button {
-                        @include button(50px, 13rem, 10px, 3px, #94652b);
+                        @include button(40px, 13rem, 10px, 3px, #94652b);
+                        font-size: medium;
                     }
                 }
             }
         }
+    }
 
+}
+
+@media only screen and (max-width:416px) {
+    .contact-container {
+        padding: 2rem 0px;
+        gap: 50px;
+
+        .contact-header {
+            @include header-smaller();
+
+            h2 {
+                color: #c7b66b;
+            }
+
+            p {
+                color: #ad9f5e;
+            }
+        }
     }
 }

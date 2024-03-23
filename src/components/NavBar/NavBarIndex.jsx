@@ -21,9 +21,9 @@ const NavBarIndex = () => {
   }
   return (
     <>
-          <ParentData.Provider value={value}>
-            <NavBar />
-          </ParentData.Provider>
+      <ParentData.Provider value={value}>
+        <NavBar />
+      </ParentData.Provider>
     </>
   )
 }

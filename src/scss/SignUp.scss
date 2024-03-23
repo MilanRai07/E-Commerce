@@ -1,5 +1,13 @@
 @import 'mixin.scss';
 
+.loader-container {
+   @include loader-container();
+
+   div {
+      @include spinner();
+   }
+}
+
 .signup-container {
    @include fade();
    @include size(100%, 100vh, null, null);
@@ -58,10 +66,77 @@
    }
 }
 
-@media only screen and (max-width:505px) {
+@media only screen and (max-width:500px) {
    .signup-container {
       .signup-form {
-         width: 25rem;
+         width: auto;
+
+         .form {
+            padding: 0;
+
+            .form-items {
+               @include flex(null, null, 10px, column);
+
+               input {
+                  width: 19rem;
+               }
+            }
+
+            button {
+               @include font(bold, medium, null, #ffff, null);
+               @include button(50px, 20rem, 10px, 3px, #a16c2b);
+            }
+
+            p {
+               margin-top: 1rem;
+               @include font(400, 15px, 27px, #a16c2b, null);
+
+               span {
+                  cursor: pointer;
+
+                  &:hover {
+                     filter: brightness(70%);
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (max-width:385px) {
+   .signup-container {
+
+      .signup-form {
+
+         .form {
+
+            .form-items {
+               @include flex(null, null, 10px, column);
+
+               input {
+                  width: 15rem;
+               }
+            }
+
+            button {
+               @include font(bold, medium, null, #ffff, null);
+               @include button(50px, 16rem, 10px, 3px, #a16c2b);
+            }
+
+            p {
+               margin-top: 1rem;
+               @include font(400, 15px, 27px, #a16c2b, null);
+
+               span {
+                  cursor: pointer;
+
+                  &:hover {
+                     filter: brightness(70%);
+                  }
+               }
+            }
+         }
       }
    }
 }

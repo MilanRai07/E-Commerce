@@ -41,3 +41,35 @@
         }
     }
 }
+
+@media only screen and (max-width:500px) {
+    .banner-container {
+        margin: 4rem 0;
+
+        .banner-content {
+            h3 {
+                @include font(500, 30px, 35px, #c7b66b, 22rem);
+            }
+
+            button {
+                @include font(bold, 15px, null, #ffff, null);
+                @include button(50px, 15rem, 10px, 3px, #94652b);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:419px) {
+    .banner-container {
+        .banner-content {
+            h3 {
+                @include font(400, 25px, 40px, #e3d285, 15rem);
+            }
+
+            button {
+                @include font(bold, 13px, null, #fff, null);
+                @include button(40px, 13rem, 10px, null, #94652b);
+            }
+        }
+    }
+}

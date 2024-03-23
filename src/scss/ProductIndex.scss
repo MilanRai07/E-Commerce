@@ -70,35 +70,103 @@
 }
 
 @media only screen and (max-width:1303px) {
-    .product-container__body {
-        flex-wrap: wrap;
+    .product-container {
+        .product-container__body {
+            display: grid;
+            justify-content: center;
+        }
     }
 }
 
 @media only screen and (max-width:1030px) {
     .product-container {
+        padding: 0px 0px;
+    }
+}
+
+@media only screen and (max-width:899px) {
+    .product-container {
         .product-container__body {
             .product-container__products {
-                gap: 15px;
+                width: 40rem;
                 justify-content: center;
-                width: 46rem;
+                margin: 0 auto;
+                padding: 0;
             }
         }
     }
 }
 
-@media only screen and (max-width:947px) {
-    .product-container {
-        padding: 0 2rem;
-    }
-}
-
-@media only screen and (max-width:865px) {
+@media only screen and (max-width:757px) {
     .product-container {
         .product-container__body {
             .product-container__products {
-                width: 70%;
+                width: 30rem;
+                justify-content: center;
             }
         }
+    }
+}
+
+@media only screen and (max-width:507px) {
+    .product-container {
+        margin: 4rem 0;
+        padding: 0px;
+
+        .product-container__header {
+            @include header-small();
+        }
+
+        .product-container__body {
+            .product-container__products {
+                width: 15rem;
+                justify-content: center;
+            }
+        }
+    }
+
+    .topNavigation {
+        margin-top: -3rem !important;
+    }
+
+    .navigation {
+
+        button {
+            @include font(bold, 13px, null, #fff, null);
+            @include button(35px, 53px, 5px, 5px, #94652b);
+        }
+
+        .navigation-number {
+
+            p {
+                @include font(500, 15px, 19px, #94652b, null);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:419px) {
+    .product-container {
+        padding: 0px;
+
+        .product-container__header {
+            @include header-smaller();
+        }
+
+        .product-container__body {
+            justify-content: center;
+            padding: 0px;
+
+            .product-container__products {
+                padding: 0px;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:369px) {
+    .navigation {
+        padding: 0;
     }
 }

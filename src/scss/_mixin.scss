@@ -93,6 +93,30 @@
     }
 }
 
+@mixin header-small {
+    gap: 5px;
+
+    h2 {
+        @include font(500, 35px, 40px, #24272E, null);
+    }
+
+    p {
+        @include font(350, 15px, 27px, #667085, null);
+    }
+}
+
+@mixin header-smaller {
+    gap: 3px;
+
+    h2 {
+        @include font(500, 25px, 40px, #24272E, null);
+    }
+
+    p {
+        @include font(350, 15px, 27px, #667085, null);
+    }
+}
+
 @mixin fade {
     @keyframes fade {
         0% {
@@ -169,6 +193,15 @@
     }
 
     animation: come-up 1s;
+}
+
+@mixin loader-container() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #282828;
 }
 
 @mixin spinner() {

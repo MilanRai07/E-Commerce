@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import CommonCard from '../../CommonCard/CommonCard';
 import useCartController from '../../../CustomHooks/useCartController';
+import { useNavigate } from 'react-router-dom';
 
 const SelectedProduct = (props) => {
   const { isLoading, data, relatedData } = props;
   const { addCartShow, addInCart, deleteFromCart } = useCartController();
 
+  const path = useNavigate()
+
+  const RouteToCategory = (category) => {
+    path(`/category/${category}`)
+  }
   return (
     <>
       {
@@ -31,7 +37,7 @@ const SelectedProduct = (props) => {
                         Remove from Cart
                       </button>
                   }
-                  <p>Category: <span>{data.category}</span></p>
+                  <p>Category: <span onClick={() => RouteToCategory(data.category)}>{data.category}</span></p>
                 </div>
               </div>
               <div className='selected-product__description'>

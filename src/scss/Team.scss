@@ -69,3 +69,84 @@
         }
     }
 }
+
+@media only screen and (max-width:500px) {
+    .team-container {
+        padding: 0 1px;
+        margin: 4rem 0;
+
+        .team-header {
+            @include header-small();
+        }
+
+        .team-card-container {
+            .team-card {
+                gap: 15px;
+
+                .team-img-container {
+                    @include d-box(15rem, 240px, 10px, null);
+                    min-height: 15rem;
+
+                    div {
+                        .team-img {
+                            height: 15rem;
+                        }
+                    }
+                }
+
+                .team-name {
+                    gap: 10px;
+                    @include d-box(115px, 240px, 10px, null);
+
+                    h3 {
+                        @include font(500, 20px, 36px, #24272E, null);
+                    }
+
+                    p {
+
+                        @include font(350, 15px, 24px, #667085, null);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:419px) {
+    .team-container {
+        .team-header {
+            @include header-smaller();
+        }
+
+        .team-card-container {
+            .team-card {
+                .team-img-container {
+                    @include d-box(12rem, 240px, 10px, null);
+                    min-height: 12rem;
+
+                    div {
+                        .team-img {
+                            height: 12rem;
+                        }
+                    }
+                }
+
+                .team-name {
+                    @include d-box(100px, 240px, 10px, null);
+                    gap: 5px;
+
+                    h3 {
+                        @include font(500, 20px, 36px, #24272E, null);
+                    }
+
+                    p {
+
+                        @include font(350, 15px, 24px, #667085, null);
+
+                    }
+                }
+            }
+        }
+    }
+}

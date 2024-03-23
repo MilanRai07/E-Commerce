@@ -32,7 +32,7 @@ const ProductDetail = () => {
     let relatedCategory = excludeSelectededProduct.filter((element) => {
       return element.category === selectedCategory;
     })
-  
+
     setRelatedData(relatedCategory.slice(1, 4));
 
     //getting otherproducts by fltering selectedProduct and related products
@@ -60,7 +60,7 @@ const ProductDetail = () => {
               relatedData={relatedData}
               isLoading={isLoading} />
           </div>
-          <div>
+          <div className='sideNav'>
             <SideNavBar otherData={otherData} />
           </div>
         </div>

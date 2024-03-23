@@ -38,3 +38,14 @@
         display: block;
     }
 }
+
+@media only screen and (max-width:500px) {
+    .hamburger-container {
+        font-size: small;
+
+        div {
+            height: 30px;
+        }
+
+    }
+}

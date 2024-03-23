@@ -54,3 +54,27 @@
     }
   }
 }
+
+@media only screen and (max-width:757px) {
+  .card {
+    @include d-box(300px, 200px, null, 5px);
+
+    .card-img__container {
+
+      .card-image {
+
+        @include image(300px, cover);
+        width: 200px;
+      }
+    }
+
+    .card-detail {
+      @include flex(null, center, 7px, column);
+
+      button {
+        @include font(bold, 14px, null, #c7b66b, null);
+        @include button(50px, 200px, 10px, 5px, #282828);
+      }
+    }
+  }
+}

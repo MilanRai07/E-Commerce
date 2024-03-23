@@ -104,10 +104,67 @@
 
         .homeimg-container {
             .home-img {
+                img {
+                    object-fit: cover;
+                }
+
                 div {
                     h3 {
                         @include font(450, 50px, 72px, #e3d285, 25rem);
                     }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .home-container {
+        .left-slide {
+            height: 40px;
+            left: 20%;
+        }
+
+        .right-slide {
+            height: 40px;
+            right: 20%;
+        }
+
+        .homeimg-container {
+
+            .home-img {
+                div {
+                    h3 {
+                        @include font(500, 30px, 45px, #e3d285, 22rem);
+                    }
+
+                    button {
+                        @include font(bold, 15px, null, #fff, null);
+                        @include button(40px, 9rem, 10px, null, #94652b);
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:419px) {
+    .home-container {
+        .homeimg-container {
+            .home-img {
+                div {
+                    h3 {
+                        @include font(400, 25px, 40px, #e3d285, 15rem);
+                    }
+
+                    button {
+                        @include font(bold, 13px, null, #fff, null);
+                        @include button(40px, 7rem, 10px, null, #94652b);
+                    }
+
+
                 }
             }
         }

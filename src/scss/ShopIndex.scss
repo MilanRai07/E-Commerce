@@ -1,8 +1,7 @@
 @import 'mixin.scss';
 
 .shop-container {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin: 6rem 0;
   position: relative;
 
   .shop-header {
@@ -100,6 +99,73 @@
     :hover {
       cursor: pointer;
       filter: brightness(50%);
+    }
+  }
+}
+
+@media only screen and (max-width:507px) {
+  .shop-container {
+    margin: 4rem 0;
+    padding: 0px;
+
+    .shop-header {
+      @include header-small();
+    }
+
+    .shop-card-container {
+      margin-top: 3rem;
+      padding: 0px !important;
+
+      .shop-slider {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .shop-card {
+          @include d-box(300px, 200px, null, 5px);
+          margin: 0 auto;
+
+          .shopimg-container {
+
+            .shop-image {
+
+              @include image(300px, null);
+              width: 200px;
+            }
+          }
+
+          .shop-detail {
+
+            h3 {
+              @include font(600, 17px, 36px, #24272E, null);
+            }
+
+            p {
+              @include font(400, 15px, 24px, #636c7e, null);
+            }
+
+            button {
+              @include button(50px, 200px, 10px, 5px, #282828);
+            }
+          }
+        }
+      }
+    }
+
+    .left-scroll {
+      display: none;
+    }
+
+    .right-scroll {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width:419px) {
+  .shop-container {
+
+    .shop-header {
+      @include header-smaller();
     }
   }
 }
