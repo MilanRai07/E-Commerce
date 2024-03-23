@@ -64,6 +64,10 @@
 
 
                 }
+                p{
+                    margin-top: 1rem;
+                    @include font(400, 18px, 27px, #a16c2b, null);
+                }
             }
         }
     }
@@ -135,6 +139,9 @@
                     .form-button {
                         @include button(40px, 13rem, 10px, 3px, #94652b);
                         font-size: medium;
+                    }
+                    p{
+                        @include font(400, 15px, 27px, #a16c2b, null);
                     }
                 }
             }

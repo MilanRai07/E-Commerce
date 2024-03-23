@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import FormikController from "../../FormikController/FormikController";
@@ -14,16 +14,26 @@ const validationSchema = Yup.object({
     number: Yup.string().required('phone number is required'),
     message: Yup.string().required('message is required')
 })
-const onSubmit = (values, onSubmitProps) => {
-    console.log('formData', values);
-    console.log('onsubmitprops', onSubmitProps)
-    setTimeout(() => {
-        onSubmitProps.setSubmitting(false);
-        onSubmitProps.resetForm();
-        console.log('you can write message again')
-    }, 2500)
-}
+
 const ContactUsForm = () => {
+    const [sentMessage, setSentMessage] = useState(false);
+
+    const onSubmit = (values, onSubmitProps) => {
+        console.log('formData', values);
+        console.log('onsubmitprops', onSubmitProps)
+        setTimeout(() => {
+            onSubmitProps.setSubmitting(false);
+            onSubmitProps.resetForm();
+            setSentMessage(true);
+        }, 2500)
+    }
+    useEffect(() => {
+        if (sentMessage === true) {
+            setTimeout(() => {
+                setSentMessage(false)
+            }, 1200)
+        }
+    })
     return (
         <>
             <Formik
@@ -71,11 +81,18 @@ const ContactUsForm = () => {
                                         formik.isSubmitting ? 'Submitting...' : 'Submit'
                                     }
                                 </button>
+                                {sentMessage ?
+                                    <p>Your message has been sent!</p>
+
+                                    :
+                                    ''
+                                }
                             </div>
                         </Form>
                     )
                 }
             </Formik>
+
         </>
     )
 }

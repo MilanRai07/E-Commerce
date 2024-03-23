@@ -124,18 +124,6 @@
                @include button(50px, 16rem, 10px, 3px, #a16c2b);
             }
 
-            p {
-               margin-top: 1rem;
-               @include font(400, 15px, 27px, #a16c2b, null);
-
-               span {
-                  cursor: pointer;
-
-                  &:hover {
-                     filter: brightness(70%);
-                  }
-               }
-            }
          }
       }
    }

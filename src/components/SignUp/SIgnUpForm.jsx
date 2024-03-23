@@ -1,6 +1,6 @@
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FormikController from "../../FormikController/FormikController";
 
 const initialValues = {
@@ -13,16 +13,27 @@ const validationSchema = Yup.object({
     youremail: Yup.string().email('invalid email').required('email is required'),
     password: Yup.string().required('password is required')
 })
-const onSubmit = (values, onSubmitProps) => {
-    console.log('formData', values);
-    setTimeout(() => {
-        onSubmitProps.setSubmitting(false);
-        onSubmitProps.resetForm();
-        console.log('you are signed up')
-    }, 2500)
-}
+
 const SIgnUpForm = () => {
     const [logerror, setLogerror] = useState(false);
+    const [signed, setSigned] = useState(false);
+
+    const onSubmit = (values, onSubmitProps) => {
+        console.log('formData', values);
+        setTimeout(() => {
+            onSubmitProps.setSubmitting(false);
+            onSubmitProps.resetForm();
+            setSigned(true)
+        }, 2500)
+    }
+
+    useEffect(() => {
+        if (signed === true) {
+            setTimeout(() => {
+                setSigned(false)
+            }, 1200)
+        }
+    })
     return (
         <>
             <div className='form'>
@@ -65,6 +76,14 @@ const SIgnUpForm = () => {
                     }
                 </Formik>
                 <div>
+                    <p>
+                        {
+                            signed ?
+                                <p>You have been signed</p>
+                                :
+                                ''
+                        }
+                    </p>
                     <p>already have an account?
                         <span
                             onMouseEnter={() => setLogerror(true)}
