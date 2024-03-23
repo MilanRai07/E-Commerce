@@ -1,14 +1,14 @@
 import George from '../assets/geroge.jpg';
 import Randy from '../assets/randy.jpg';
 import Chris from '../assets/chris.jpg';
-import John from '../assets/John.jpg';
+import Milan from '../assets/milan.jpg';
 export const TeamData = [
     {
         id: 0,
-        'img': John,
+        'img': Milan,
         'name': 'Milan Rai',
         'position': 'Founder',
-        'company': 'www.beatles.com',
+        'company': 'www.milanraiyt07.com',
         'text': 'I have been close to this company for a long time. It has helped me a lot in my musical journey. All my istruments are guided by Milan Shop. Thank you a lot for guiding me always.'
     },
     {
