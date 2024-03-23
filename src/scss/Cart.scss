@@ -201,6 +201,10 @@
             }
         }
     }
+    .alert-text{
+        width:17rem;
+        text-align: center;
+    }
     .emptyCart-container{
         h2 {
             @include font(600, 25px, 40px, #24272E, null);

@@ -11,6 +11,7 @@ const CartIndex = () => {
   const [cartTotal, setCartTotal] = useState();
   const [shipping, setShipping] = useState(200);
   const [subTotal, setSubTotal] = useState();
+  const [proceed, setProceed] = useState(false);
 
   useEffect(() => {
     const getCartTotal = cart.reduce((accumulator, currentValue) => { //get the total price of all cart
@@ -72,8 +73,16 @@ const CartIndex = () => {
               </div>
             </div>
             <div>
-              <button className="cart-total-checkout">Proceed to checkout</button>
+              <button className="cart-total-checkout"
+                onClick={() => setProceed(true)}>
+                Proceed to checkout
+              </button>
             </div>
+            {proceed ?
+                <p className="alert-text">Sorry! the feature is not available at the moment</p>
+                :
+                ''
+              }
           </div>
         </div>
       </>
