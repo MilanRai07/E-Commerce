@@ -1,6 +1,6 @@
 @import 'mixin.scss';
 
-.error {
+.error-page {
     height: 85vh;
     width: auto;
     background-color: #282828;
@@ -21,7 +21,7 @@
 }
 
 @media only screen and (max-width:500px) {
-    .error {
+    .error-page {
         div {
             h1 {
                 @include font(600, 50px, 10px, #e3d285, null);
