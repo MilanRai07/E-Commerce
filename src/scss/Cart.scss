@@ -201,4 +201,25 @@
             }
         }
     }
+    .emptyCart-container{
+        h2 {
+            @include font(600, 25px, 40px, #24272E, null);
+        }
+    
+        p {
+            @include font(400, 15px, 20px, #667085, null);
+        }
+    }
+}
+@media only screen and (max-width:500px){
+    .emptyCart-container{
+        text-align: center;
+        h2 {
+            @include font(600, 23px, 40px, #24272E,14rem);
+        }
+    
+        p {
+            @include font(400, 13px, 20px, #667085, 14rem);
+        }
+    }
 }
