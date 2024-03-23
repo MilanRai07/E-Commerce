@@ -128,8 +128,12 @@
 
 @media only screen and (max-width:380px) {
   .navbar-container {
-    @include flex(center, center, null, column);
+    @include flex(center, center, 10px, column);
     z-index: 2;
     height: 115px;
+  }
+
+  .cart-number {
+    @include position(67%, null, null, null)
   }
 }
