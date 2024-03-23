@@ -1,0 +1,36 @@
+@import 'mixin.scss';
+
+.error {
+    height: 85vh;
+    width: auto;
+    background-color: #282828;
+    @include flex(center, center, null, null);
+
+    div {
+        text-align: center;
+
+        h1 {
+            @include font(600, 80px, 72px, #e3d285, null);
+            margin-bottom: 10px;
+        }
+
+        p {
+            @include font(500, 20px, 72px, #c7b66b, null);
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .error {
+        div {
+            h1 {
+                @include font(600, 50px, 10px, #e3d285, null);
+                margin-bottom: 1px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}

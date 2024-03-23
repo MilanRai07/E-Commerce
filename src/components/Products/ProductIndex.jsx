@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ProductData } from '../../Data/ProductData';
 import '../../scss/ProductIndex.scss';
 import SideNavBar from '../SideNavBar/SideNavbar';
@@ -15,15 +15,21 @@ const ProductIndex = () => {
   const { category } = useParams();
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 6;
-
+  const stringCheck = ['Guitar', 'Drum', 'Processor', 'Other']
+  let path = useNavigate();
   window.scrollTo(0, 0)
 
-  //changes the current page to one once category from useparam is changed
+  //changes the current page to one once category from useparam is changed only if the params are validif not errpr page
   useEffect(() => {
-    setCurrentPage(1);
+    if (stringCheck.includes(category)) {
+      setCurrentPage(1)
+    } else {
+      path('*')
+    }
   }, [category])
 
   useEffect(() => {
+
     //fetch the data and slice it according to number of items in one page
     const fetchItems = (recordsPerPage) => {
       //made category form parameter with first letter small to match the catgeory in data

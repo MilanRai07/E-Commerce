@@ -11,6 +11,7 @@ import TestimonialIndex from './components/Testimonial/TestimonialIndex';
 import ProductDetail from './components/SinglePages/ProductDetail/ProductDetail';
 import ProductIndex from './components/Products/ProductIndex';
 import SignUpIndex from './components/SignUp/SignUpIndex';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function MainRouter() {
   return (
@@ -26,6 +27,7 @@ function MainRouter() {
           <Route path='/product/:id/:name' element={<ProductDetail />} />
           <Route path='/category/:category' element={<ProductIndex />} />
           <Route path='/signup' element={<SignUpIndex />} />
+          <Route path='*' element={<ErrorPage/>}/>
         </Route>
       </Routes>
       <FooterIndex />
