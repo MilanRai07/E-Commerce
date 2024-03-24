@@ -25,6 +25,10 @@ import Process6 from '../assets/process6.jpg';
 import Process7 from '../assets/process7.jpg';
 import Process8 from '../assets/process8.jpg';
 import Process9 from '../assets/process9.jpg';
+import harmonica from '../assets/harmonica.jpg';
+import Piano from '../assets/piano.jpeg';
+import Violin from '../assets/violin.jpg';
+
 
 export const ProductData = [
     {
@@ -269,6 +273,35 @@ export const ProductData = [
         'category': 'processor',
         'recent': false
     },
+    {
+        id: 27,
+        'img': harmonica,
+        'name': 'Harmonica',
+        'price': 2000,
+        'detail': 'Fusce ac ante a dolor facilisis auctor. Pellentesque nunc orci, maximus eu tempus in, facilisis nec lorem. Duis id libero odio. Nam eu felis maximus, luctus dolor vitae, molestie erat. Donec suscipit efficitur fringilla. Suspendisse facilisis sagittis tristique. Morbi fringilla tortor ut mauris fermentum, in aliquet libero efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id diam vestibulum, rhoncus magna vitae, dictum ligula. In sagittis posuere massa. Pellentesque dignissim congue varius. Vivamus et luctus sem. In interdum a risus eu porttitor. Suspendisse sodales leo id orci tempor, sit amet porttitor lectus rutrum. Mauris iaculis, ex auctor pharetra egestas, tellus magna porttitor sapien, nec congue turpis arcu id dolor',
+        'category': 'others',
+        'recent': false
+    },
+    {
+        id: 28,
+        'img': Piano,
+        'name': 'Yamaha G2C Piano',
+        'price': 170000,
+        'detail': 'Fusce ac ante a dolor facilisis auctor. Pellentesque nunc orci, maximus eu tempus in, facilisis nec lorem. Duis id libero odio. Nam eu felis maximus, luctus dolor vitae, molestie erat. Donec suscipit efficitur fringilla. Suspendisse facilisis sagittis tristique. Morbi fringilla tortor ut mauris fermentum, in aliquet libero efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id diam vestibulum, rhoncus magna vitae, dictum ligula. In sagittis posuere massa. Pellentesque dignissim congue varius. Vivamus et luctus sem. In interdum a risus eu porttitor. Suspendisse sodales leo id orci tempor, sit amet porttitor lectus rutrum. Mauris iaculis, ex auctor pharetra egestas, tellus magna porttitor sapien, nec congue turpis arcu id dolor',
+        'category': 'others',
+        'recent': false
+    },
+    {
+        id: 29,
+        'img': Violin,
+        'name': 'Violin',
+        'price': 12000,
+        'detail': 'Fusce ac ante a dolor facilisis auctor. Pellentesque nunc orci, maximus eu tempus in, facilisis nec lorem. Duis id libero odio. Nam eu felis maximus, luctus dolor vitae, molestie erat. Donec suscipit efficitur fringilla. Suspendisse facilisis sagittis tristique. Morbi fringilla tortor ut mauris fermentum, in aliquet libero efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id diam vestibulum, rhoncus magna vitae, dictum ligula. In sagittis posuere massa. Pellentesque dignissim congue varius. Vivamus et luctus sem. In interdum a risus eu porttitor. Suspendisse sodales leo id orci tempor, sit amet porttitor lectus rutrum. Mauris iaculis, ex auctor pharetra egestas, tellus magna porttitor sapien, nec congue turpis arcu id dolor',
+        'category': 'others',
+        'recent': false
+    },
+
+
 
 
 ]

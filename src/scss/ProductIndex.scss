@@ -20,13 +20,15 @@
         @include flex(center, null, 50px, null);
 
         .product-container__products {
-            @include flex(space-between, null, 49px, null);
-            flex-wrap: wrap;
-            padding: 10px;
-            width: 50rem;
-            min-height: 46rem;
-            padding: 10px;
-            background-color: #f2f2f2;
+            .products {
+                @include flex(null, null, 49px, null);
+                flex-wrap: wrap;
+                padding: 10px;
+                width: 50rem;
+                min-height: 46rem;
+                padding: 10px;
+                background-color: #f2f2f2;
+            }
 
         }
     }
@@ -88,10 +90,12 @@
     .product-container {
         .product-container__body {
             .product-container__products {
-                width: 40rem;
-                justify-content: center;
-                margin: 0 auto;
-                padding: 0;
+                .products {
+                    width: 40rem;
+                    justify-content: center;
+                    margin: 0 auto;
+                    padding: 0;
+                }
             }
         }
     }
@@ -101,8 +105,10 @@
     .product-container {
         .product-container__body {
             .product-container__products {
-                width: 30rem;
-                justify-content: center;
+                .products {
+                    width: 30rem;
+                    justify-content: center;
+                }
             }
         }
     }
@@ -119,8 +125,10 @@
 
         .product-container__body {
             .product-container__products {
-                width: 15rem;
-                justify-content: center;
+                .products {
+                    width: 15rem;
+                    justify-content: center;
+                }
             }
         }
     }
@@ -158,8 +166,10 @@
             padding: 0px;
 
             .product-container__products {
-                padding: 0px;
-                width: auto;
+                .products {
+                    padding: 0px;
+                    width: auto;
+                }
             }
         }
     }

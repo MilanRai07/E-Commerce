@@ -15,7 +15,7 @@ const ProductIndex = () => {
   const { category } = useParams();
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 6;
-  const stringCheck = ['Guitar', 'Drum', 'Processor', 'Other']
+  const stringCheck = ['Guitar', 'Drum', 'Processor', 'Others',]
   let path = useNavigate();
   window.scrollTo(0, 0)
 
@@ -91,21 +91,23 @@ const ProductIndex = () => {
             </div>
             <div className='product-container__body'>
               <div className='product-container__products'>
-                {
-                  Data.map((element) => {
-                    const { id, img, name, price } = element;
-                    return (
-                      <div key={id}>
-                        <CommonCard
-                          Id={id}
-                          Img={img}
-                          Name={name}
-                          Price={price}
-                        />
-                      </div>
-                    )
-                  })
-                }
+                <div className='products'>
+                  {
+                    Data.map((element) => {
+                      const { id, img, name, price } = element;
+                      return (
+                        <div key={id}>
+                          <CommonCard
+                            Id={id}
+                            Img={img}
+                            Name={name}
+                            Price={price}
+                          />
+                        </div>
+                      )
+                    })
+                  }
+                </div>
                 <div className='navigation bottomPage' >
                   <button onClick={prev}>Prev</button>
                   <div className='navigation-number'>
